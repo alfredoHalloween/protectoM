@@ -1,0 +1,121 @@
+table
+{
+    background: darkorange;
+    border: solid;
+    border-collapse: separate;
+    margin: 0 auto;
+/*    margin-top: 1cm; */
+    table-layout: inherit;
+    display: run-in;
+    width: 100%;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 18px;
+   
+    
+    
+}
+/*head
+{
+    background: #f27f27;
+    color: #fff;
+}*/
+
+thead th
+{
+    padding: 10px;
+}
+tbody
+{
+    text-align: match-parent;
+    color: background;
+    
+}
+tbody td
+{
+    padding: 5px;
+    border-bottom: solid 1px #ccc;
+    font-weight: bold;
+    
+         
+}
+tbody td
+{
+    background: #FFF;
+  
+   
+    
+}
+tbody td
+{
+    background: #f1f1f1;
+    }
+/*tfoot
+{
+    text-align: center;
+    background: #f27f27;
+    color: #fff;
+}
+tfoot td, tfoot th
+{
+    font-weight: bold;
+    padding: 10px;
+}
+*/
+table tr:hover td
+{
+    background-color:  rgb(241,183,139);
+}
+p
+{
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+fieldset
+{
+    background: rgba(0,0,0,0.6);
+    border: 3px solid #FFF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #FFF;
+    color: #FFF;
+    font-weight: bold;
+    margin: auto;
+    max-width: 400px;
+    width: 80%;
+}
+    legend    
+    {
+        color: #ffffff;
+    }
+.boton:hover
+{
+    background-color: #f27f27;
+}
+                .b:link {text-decoration:none; color: green;}    
+                .b:visited {text-decoration:none; color: green;} 
+                .b:hover {background-color:#f27f27; text-decoration:none; color: green;}    
+                .b:active {background-color:#f27f27; text-decoration:none; color: #ffffff;}  
+                
+.sub
+{
+    border-bottom: white 2px solid;
+}
+.ui-datepicker-trigger
+{
+    cursor:  pointer;
+    height: 30px;
+    width: 30px;
+}
+input[type=text], select
+{
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+table tr{
+    width: 100%;
+    padding: 2px 2px 2px 2px; 
+    text-align:  center;
+}
+

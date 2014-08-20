@@ -1,0 +1,134 @@
+@media screen and (max-width : 999px)
+{
+    body
+    {
+        background-image: url("../img/fondo.jpg");
+        background-size: 100%;
+        color: #ffffff;
+        font-family: arial, sans-serif;
+        font-size: 120%;
+        font-weight: bold;
+        margin: 0px 0px 0px 0px; 
+        text-align: center;
+        text-shadow: 0.1em 0.1em #333;
+    }
+    fieldset
+    {
+        background: rgba(0,0,0,0.6);
+        border: 3px solid #FFF;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px #FFF;
+        margin: auto;
+        margin-top: 30%;
+        max-width: 400px;
+        width: 80%;
+    }
+    img
+    {
+        border: 0;
+    }
+    label
+    {
+        display: block;
+        margin-top: 0.5em;
+    }
+    legend    
+    {
+        color: #ffffff;
+    }
+    #header img
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #content
+    {
+        text-align: center;
+        width: 100%;
+    }
+    form img
+    {
+        margin-top: 1em;
+        float: right;
+        width: 13%;
+    }
+    .boton
+    {
+        margin-top: 1em;
+        margin-left: 13%;
+        width: 50%;
+    }
+    .texto
+    {
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #cccccc;
+        width: 65%;
+    }
+}
+@media screen and (min-width : 1000px)
+{
+    body
+    {
+        background-image: url("../img/fondo.jpg");
+        background-size: 100%;
+        color: #ffffff;
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        margin: 0px 0px 0px 0px; 
+        text-align: center;
+        text-shadow: 0.1em 0.1em #333;
+    }
+    fieldset
+    {
+        background: rgba(0,0,0,0.6);
+        border: 3px solid #FFF;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px #FFF;
+        margin: auto;
+        width: 30%;
+        margin-top: 200px;
+    }
+    img
+    {
+        border: 0;
+    }
+    label
+    {
+        display: block;
+        margin-top: 0.5em;
+    }
+    legend
+    {
+        color: #ffffff;
+    }
+    #header img
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #content
+    {
+        text-align: center;
+        width: 100%;
+    }
+    form img
+    {
+        margin-top: 1em;
+        float: right;
+        width: 12%;
+    }
+    .boton
+    {
+        margin-top: 1em;
+        margin-left: 12%;
+        width: 50%;
+    }
+    .texto
+    {
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #cccccc;
+        width: 50%;
+    }
+}           
