@@ -221,10 +221,10 @@
                 <td>COORDINACIÓN REHABILITACIÓN DE TRENES</td>
                 <td ><?php echo $numeroDeRegistros; ?></td>                
             </tr>
-            <tr>
+            <tr>                
                 <th colspan="2">
                     <?php
-                    echo "total:".$total;
+                    echo "Total: ".$total;
                     ?>
                 </th>
             </tr>
