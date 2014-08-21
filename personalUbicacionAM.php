@@ -28,7 +28,7 @@ and open the template in the editor.
                     <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
                 </ul>
-            </div>
+             </div>
         <table cellpadding="2" cellspacing="2" border="2">
             <tr>
                 <th colspan="9">TABLA GENERAL</th>
@@ -43,6 +43,7 @@ and open the template in the editor.
                 }
             ?>
         </table>
-         </div>
+        
+        </div>
     </body>
 </html>
