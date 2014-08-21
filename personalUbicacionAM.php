@@ -43,7 +43,7 @@ and open the template in the editor.
                 }
             ?>
         </table>
-        
+        ko
         </div>
     </body>
 </html>
