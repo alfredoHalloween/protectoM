@@ -34,10 +34,28 @@
             $this->descanso = mysql_result($hacerConsulta, $contador, "descanso");
             $this->grado = mysql_result($hacerConsulta, $contador, "grado");
             $this->concluido = mysql_result($hacerConsulta, $contador, "concluido");
+            if($this->concluido == TRUE) {
+                $this->concluido = "CONCLUIDOS";
+            } else {
+                $this->concluido = "NO CONCLUIDOS";
+            }            
             $this->extension = mysql_result($hacerConsulta, $contador, "extension");
             $this->correo = mysql_result($hacerConsulta, $contador, "correo");
+            if($this->correo == NULL) {
+                $this->correo = "SIN CORREO";
+            }             
             $this->instructor = mysql_result($hacerConsulta, $contador, "instructor"); 
+            if($this->instructor == TRUE) {
+                $this->instructor="SI";
+            } else {
+                $this->instructor="NO";
+            }
             $this->formacion = mysql_result($hacerConsulta, $contador, "formacion");
+            if($this->formacion == TRUE) {
+                $this->formacion="SI";
+            } else {
+                $this->formacion="NO";
+            }
         }             
         function imprimirEmpleado() {
             echo "<tr>";
@@ -54,35 +72,13 @@
             echo "<td>$this->horario</td>";
             echO "<td>$this->descanso</td>";
             echo "<td>$this->grado</td>";
-            
-            if($this->concluido == TRUE) {
-                echo "<td>CONCLUIDOS</td>";
-            } else {
-                echo "<td>NO CONCLUIDOS</td>";
-            }                      
-           
-            echo "<td>$this->extension</td>";
-            
-            if($this->correo != NULL) {
-                echo "<td>$this->correo";
-            } else {
-                echo "<td>SIN CORREO</td>";
-            }            
-            
-            if ($this->instructor == TRUE) {
-                echo "<td>SI</td>";
-            } else {
-                echo "<td>NO</td>";
-            }                   
-           
-            if ($this->formacion == TRUE) {
-                echo "<td>SI</td>";
-            } else {
-                echo "<td>NO</td>";
-            } 
+            echo "<td>$this->concluido</td>";
+            echo "<td>$this->extension</td>"; 
+            echo "<td>$this->instructor</td>"; 
+            echo "<td>$this->formacion</td>"; 
             echo "<tr>";
         }
-    }
+    }    
     
     function imprimirCabecera() {
         echo "<tr>
@@ -105,5 +101,94 @@
             <th>¿Es instructor?</th>
             <th>¿Tomó curso de formación?</th>
         </tr>";
+    }
+    
+    class empleadoPersonal extends empleado {
+        function asignar($hacerConsulta) {
+            parent::asignar($hacerConsulta, 0);
+        }
+        function obtenerCursos($hacerCursos) {
+            
+        }
+        function imprimir() {
+            echo "<table border=\"1\" cellpadding=\"2\" cellspacing=\"1\">
+                    <tr> 
+                        <th colspan=\"2\">DATOS PERSONALES</th>
+                    </tr>
+                    <tr>
+                        <th>Expediente</th>
+                        <td>$this->expediente</td> 
+                    </tr>           
+                    <tr>
+                        <th>Nombre</th>
+                        <td>$this->nombre</td>          
+                    </tr>           
+                    <tr>
+                        <th>Puesto</th>
+                        <td>$this->puesto</td> 
+                    </tr>           
+                    <tr>
+                        <th>Adscripción</th>
+                        <td>$this->adscripcion</td>
+                    </tr>           
+                    <tr>
+                        <th>Ubicación</th>
+                        <td>$this->ubicacion</td> 
+                    </tr>           
+                    <tr>
+                    <th>Coordinación</th>
+                        <td>$this->coordinacion</td> 
+                    </tr>                     
+                    <tr>
+                        <th>Plaza</th>
+                        <td>$this->plaza</td>
+                    </tr>           
+                    <tr>
+                        <th>Plaza SIDEN</th>
+                        <td>$this->siden</td>
+                    </tr>           
+                    <tr>
+                        <th>Calidad</th>
+                        <td>$this->calidad</td>
+                    </tr>           
+                    <tr>
+                        <th>Area</th>
+                        <td>$this->area</td>           
+                    </tr>           
+                    <tr>
+                        <th>Horario</th>          
+                        <td>$this->horario</td>
+                    </tr>           
+                    <tr>
+                        <th>Descanso</th>
+                        <td>$this->descanso</td>           
+                    </tr>         
+                    <tr>
+                        <th>Ultimo grado de estudios</th>
+                        <td>$this->grado</td>           
+                    </tr>
+                    <tr>
+                        <th>¿Concluido?</th>
+                        <td>$this->concluido</td> 
+                    </tr>                     
+                    <tr>
+                        <th>Extensión</th>
+                        <td>$this->extension</td> 
+                    </tr>
+                    <tr>
+                        <th>Correo</th>
+                        <td>$this->correo</td> 
+                    </tr>                     
+                    <tr>
+                        <th>¿Es instructor?</th>
+                        <td>$this->instructor</td> 
+                    </tr>              
+                    <tr>
+                        <th>¿Tomó el curso de formación de instructores?</th>
+                        <td>$this->formacion</td> 
+                    </tr>";      
+                                        
+            echo "</table>";
+        }
     }
 ?>
