@@ -104,13 +104,19 @@
     }
     
     class empleadoPersonal extends empleado {
-        function asignar($hacerConsulta) {
+        public $cadenaCurso;
+        public $numCursos;
+                function asignar($hacerConsulta) {
             parent::asignar($hacerConsulta, 0);
         }
-        function obtenerCursos($hacerCursos) {
+
+        function imprimir($hacerCursos) {            
+            $this->numCursos = mysql_num_rows($hacerCursos);
+            for($i = 0; $i < $this->numCursos; $i++) {
+                $temporal=mysql_result($hacerCursos, $i, "nom_curso");
+                $this->cadenaCurso.="*$temporal<br>";
+            }
             
-        }
-        function imprimir() {
             echo "<table border=\"1\" cellpadding=\"2\" cellspacing=\"1\">
                     <tr> 
                         <th colspan=\"2\">DATOS PERSONALES</th>
@@ -186,7 +192,15 @@
                     <tr>
                         <th>¿Tomó el curso de formación de instructores?</th>
                         <td>$this->formacion</td> 
-                    </tr>";                                              
+                    </tr>   
+                    <tr>
+                        <th>Cantidad de cursos tomados</th>
+                        <td>$this->numCursos</td> 
+                    </tr>
+                    <tr>
+                        <th>Cursos tomados</th>
+                        <td>$this->cadenaCurso</td> 
+                    </tr>";  
             echo "</table>";
         }
     }
