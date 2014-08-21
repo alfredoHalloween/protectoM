@@ -22,7 +22,7 @@
         
         <form id='busqueda' name='busqueda' action='resultado.php' method='post'>
             <ul>
-           Expediente: <input type='text' id='consulta' name='consulta' placeholder='teclee el expediente' required>
+           Expediente: <input type='text' id='consulta' name='consulta' placeholder='Teclee el expediente' required>
             <li>
           <button class="submit" type="submit">Enviar</button>
         </li>
