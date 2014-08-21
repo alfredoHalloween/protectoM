@@ -43,7 +43,7 @@ and open the template in the editor.
                 }
             ?>
         </table>
-        kol
+        kolccc
         </div>
     </body>
 </html>
