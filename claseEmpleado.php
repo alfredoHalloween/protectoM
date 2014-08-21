@@ -186,8 +186,7 @@
                     <tr>
                         <th>¿Tomó el curso de formación de instructores?</th>
                         <td>$this->formacion</td> 
-                    </tr>";      
-                                        
+                    </tr>";                                              
             echo "</table>";
         }
     }
