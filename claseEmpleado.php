@@ -124,7 +124,7 @@
                 if($this->temporalAnnio != $this->annio) {
                     $this->annio = $this->temporalAnnio;
                     if($this->annio == 0000) {                        
-                        $this->cadenaCurso.="<font color=\"\#00FF00\">SIN FECHA</font><br>";
+                        $this->cadenaCurso.="<font color=\"\#00FF00\">SIN FECHA CONFIRMADA</font><br>";
                     } else {
                         $this->cadenaCurso.="<font color=\"\#00FF00\">$this->annio</font><br>";
                     }
