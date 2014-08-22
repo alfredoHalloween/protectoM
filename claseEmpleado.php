@@ -33,6 +33,9 @@
             $this->horario = mysql_result($hacerConsulta, $contador, "horario");
             $this->descanso = mysql_result($hacerConsulta, $contador, "descanso");
             $this->grado = mysql_result($hacerConsulta, $contador, "grado");
+            if($this->grado == NULL) {
+                $this->grado = "NO INDICADO";
+            }
             $this->concluido = mysql_result($hacerConsulta, $contador, "concluido");
             if($this->concluido == TRUE) {
                 $this->concluido = "CONCLUIDOS";
@@ -41,7 +44,7 @@
             }            
             $this->extension = mysql_result($hacerConsulta, $contador, "extension");
             $this->correo = mysql_result($hacerConsulta, $contador, "correo");
-            if($this->correo == NULL) {
+            if($this->correo == NULL || $this->correo == 0) {
                 $this->correo = "SIN CORREO";
             }             
             $this->instructor = mysql_result($hacerConsulta, $contador, "instructor"); 
@@ -106,17 +109,30 @@
     class empleadoPersonal extends empleado {
         public $cadenaCurso;
         public $numCursos;
+        public $annio;
+        public $temporalAnnio;
                 function asignar($hacerConsulta) {
             parent::asignar($hacerConsulta, 0);
         }
 
         function imprimir($hacerCursos) {            
             $this->numCursos = mysql_num_rows($hacerCursos);
-            for($i = 0; $i < $this->numCursos; $i++) {
-                $temporal=mysql_result($hacerCursos, $i, "nom_curso");
-                $this->cadenaCurso.="*$temporal<br>";
+            for($i = 0; $i < $this->numCursos; $i++) {                
+                $this->temporalAnnio = mysql_result($hacerCursos, $i, "ini_curso");
+                $this->temporalAnnio = substr($this->temporalAnnio, 0, 4);
+                echo "$this->temporalAnnio<br>";
+                if($this->temporalAnnio != $this->annio) {
+                    $this->annio = $this->temporalAnnio;
+                    if($this->annio == 0000) {                        
+                        $this->cadenaCurso.="<font color=\"\#00FF00\">SIN FECHA</font><br>";
+                    } else {
+                        $this->cadenaCurso.="<font color=\"\#00FF00\">$this->annio</font><br>";
+                    }
+                }
+                $this->temporal=mysql_result($hacerCursos, $i, "nom_curso");
+                $this->cadenaCurso.="*$this->temporal<br>";
             }
-            
+
             echo "<table border=\"1\" cellpadding=\"2\" cellspacing=\"1\">
                     <tr> 
                         <th colspan=\"2\">DATOS PERSONALES</th>
