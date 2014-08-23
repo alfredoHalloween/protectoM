@@ -119,8 +119,7 @@
             $this->numCursos = mysql_num_rows($hacerCursos);
             for($i = 0; $i < $this->numCursos; $i++) {                
                 $this->temporalAnnio = mysql_result($hacerCursos, $i, "ini_curso");
-                $this->temporalAnnio = substr($this->temporalAnnio, 0, 4);
-                echo "$this->temporalAnnio<br>";
+                $this->temporalAnnio = substr($this->temporalAnnio, 0, 4);   
                 if($this->temporalAnnio != $this->annio) {
                     $this->annio = $this->temporalAnnio;
                     if($this->annio == 0000) {                        
