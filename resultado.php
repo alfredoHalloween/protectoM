@@ -8,31 +8,15 @@
         
         <?php
             require 'usarBD.php';
+            require 'claseEmpleado.php';
             $sujeto = $_POST['consulta'];
             $consulta = "SELECT * FROM general WHERE expediente=\"$sujeto\"; ";
-            $cursos = "SELECT * FROM cursos WHERE expediente=\"$sujeto\";";
+            $cursos = "SELECT * FROM cursos WHERE expediente=\"$sujeto\" ORDER BY ini_curso DESC;";
             $hacerconsulta= mysql_query($consulta,$conexion);
-            $numeroColumnas = mysql_num_fields($hacerconsulta);
-            $numeroDeRegistros= mysql_num_rows($hacerconsulta);
+            $hacerCursos = mysql_query($cursos, $conexion);
         ?>
     </head>
-    <body>
-        
-        <?php
-                          
-            $expediente=mysql_result ($hacerconsulta, 0, "expediente");
-            $nombre=mysql_result ($hacerconsulta, 0, "nombre");
-            $puesto=mysql_result ($hacerconsulta, 0, "puesto");
-            $adscripcion=mysql_result ($hacerconsulta, 0, "adscripcion");
-            $ubicacion=mysql_result ($hacerconsulta, 0, "ubicacion");
-            $plaza=mysql_result ($hacerconsulta, 0, "plaza");
-            $siden=mysql_result ($hacerconsulta, 0, "siden");
-            $calidad=mysql_result ($hacerconsulta, 0, "calidad");
-            $area=mysql_result ($hacerconsulta, 0, "area");
-            $horario=mysql_result ($hacerconsulta, 0, "horario");
-            $descanso=mysql_result ($hacerconsulta,0, "descanso");            
-          ?>
-        
+    <body>        
          <div id="content">
             <div id="nav">
                 <ul>
@@ -43,67 +27,12 @@
                 </ul>
                 <br>    
                 <br>
-        
-        <table border="1" cellpadding="2" cellspacing="1">
-           <tr> 
-               <th colspan="2">DATOS PERSONALES</th></tr>
-           <tr>
-           <th>Expediente</th>
-           <td><?php echo $expediente; ?></td> 
-           </tr>
-           
-           <tr>
-           <th>Nombre</th>
-           <td><?php echo $nombre; ?></td>          
-           </tr>
-           
-           <tr>
-           <th>Puesto</th>
-           <td><?php echo $puesto; ?></td> 
-           </tr>
-           
-           <tr>
-           <th>Adscripción</th>
-           <td><?php echo $adscripcion; ?></td>
-           </tr>
-           
-           <tr>
-           <th>Ubicación</th>
-           <td><?php echo $ubicacion; ?></td> 
-           </tr>
-           
-           <tr>
-           <th>Plaza</th>
-           <td><?php echo $plaza; ?></td>
-           </tr>
-           
-           <tr>
-           <th>Plaza SIDEN</th>
-           <td><?php echo $siden; ?></td>
-           </tr>
-           
-           <tr>
-           <th>Calidad</th>
-           <td><?php echo $calidad; ?></td>
-           </tr>
-           
-           <tr>
-           <th>Area</th>
-           <td><?php echo $area; ?></td>           
-           </tr>
-           
-           <tr>
-           <th>Horario</th>          
-           <td><?php echo $horario; ?></td>
-           </tr>
-           
-           <tr>
-           <th>Descanso</th>
-           <td><?php echo $descanso; ?></td>           
-           </tr>   
-           
-        </table>
-      </div>
-      </div>
+                <?php
+                    $personal = new empleadoPersonal();
+                    $personal->asignar($hacerconsulta);
+                    $personal->imprimir($hacerCursos);
+                ?>
+            </div>
+        </div>
     </body>
 </html>
