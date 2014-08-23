@@ -5,8 +5,11 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title></title>
+        <link href="css/movil.css" rel="stylesheet" type="text/css">
+        <link href="css/tabla2.css" rel="stylesheet" type="text/css">
         <?php
             require 'usarBD.php';            
             require 'claseEmpleado.php';

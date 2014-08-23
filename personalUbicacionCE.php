@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
         <link href="css/movil.css" rel="stylesheet" type="text/css">
         <link href="css/tabla2.css" rel="stylesheet" type="text/css">
-        <link href="css/totales.css" rel="stylesheet" type="text/css">
+<!--        <link href="css/totales.css" rel="stylesheet" type="text/css">-->
             <?php
             require 'usarBD.php';            
             require 'claseEmpleado.php';
@@ -30,16 +30,7 @@ and open the template in the editor.
                 </ul>
                   </div>
                   </div>
-                <table class="totales">
-                    <tr>
-                        <td>
-                            <th>Total = <?php echo $numeroDeRegistros; ?></th>
-                       </td>
-                   </tr>
-                </table>
-                
-        <table cellpadding="2" cellspacing="2" border="2">
-            
+         <table cellpadding="2" cellspacing="2" border="2">
             <tr>
                 <th colspan="18">TABLA GENERAL</th>
                 
