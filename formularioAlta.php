@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title></title>
         <link href="css/movil.css" rel="stylesheet" type="text/css">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">       
         
 </head>
 <body>
@@ -23,7 +24,8 @@
              <tr><td>Nombre: </td><td><input type="text" name="nombre" required/></td></tr>
              <tr><td>Puesto: </td><td><input type="text" name="nombre" required/></td></tr>
              <tr><td>Adscripción:</td><td>   
-             <select name='Adscripción' >
+             <select name='Adscripción' required>
+                <option></option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMAN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMAN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA</option>
@@ -49,16 +51,17 @@
             <tr><td>Plaza: </td><td><input type="text" name="Plaza" required/></td></tr>
             <tr><td>Siden: </td><td><input type="text" name="Siden" required/></td></tr>
             <tr><td>Calidad: </td><td>
-            <input type="radio" name='calidad' value='Base'/> BASE
-            <input type="radio" name='calidad' value='Confianza'/> CONFIANZA
-            <input type="radio" name='calidad' value='Estructura'/> Estructura
-            <input type="radio" name='calidad' value='Honorarios'/> Honorarios
+            <input type="radio" name='calidad' value='Base' required/> BASE
+            <input type="radio" name='calidad' value='Confianza' required/> CONFIANZA
+            <input type="radio" name='calidad' value='Estructura' required/> Estructura
+            <input type="radio" name='calidad' value='Honorarios' required/> Honorarios
             </td></tr>
             <tr><td>Área: </td><td><input type="text" name="Area" required/></td></tr>
             <tr><td>Horario: </td><td><input type="text" name="Horario" placeholder='EJEMPLO:07:00 A 15:00' required/></td></tr>
             <tr><td>Descanso: </td><td><input type="text" name="Descanso" placeholder='EJEMPLO: S Y D, L Y M.' required/></td></tr>
             <tr><td>Ultimo grado de estudios:</td><td>  
-            <select name='estudios'>
+            <select name='estudios' required>
+                       <option></option>
                        <option value='Primaria'>Primaria</option>
                        <option value='Secundaria'>Secundaria</option>
                        <option value='Especialidades'>Especialidades(Carrera Tecnica)</option>
@@ -70,18 +73,21 @@
             </select>
            </td></tr>
             <tr><td>Concluido: </td><td>
-            <input type="radio" name='concluido' value='si'/> Si
-            <input type="radio" name='concluido' value='no'/> No
+            <input type="radio" name='concluido' value='si' required/> Si
+            <input type="radio" name='concluido' value='no' required/> No
             </td></tr>
-            <tr><td>Extension: </td><td><input type="text" name="extension" /></td></tr>
-            <tr><td>Correo: </td><td><input type="text" name="correo" /></td></tr>
+            <tr><td>Extension: </td><td><input type="text" name="extension" required/></td></tr>
+            <tr><td>Correo: </td><td><input type="text" name="correo"  required/></td></tr>
             <tr><td>Instructor: </td><td>
-            <input type="radio" name='instructor' value='si'/> Si
-            <input type="radio" name='instructor' value='no'/> No
+            <input type="radio" name='instructor' value='si' required/> Si
+            <input type="radio" name='instructor' value='no' required/> No
             </td></tr>
             <tr><td>¿Tomo el curso de formación de instructores? </td><td>
-            <input type="radio" name='formacion' value='si'/> Si
-            <input type="radio" name='formacion' value='no'/> No
+            <input type="radio" name='formacion' value='si' required/> Si
+            <input type="radio" name='formacion' value='no' required/> No
+            </td></tr>
+            <tr ><td>
+               <button class="submit" type="submit">Enviar Datos</button>
             </td></tr>
                
         </table>

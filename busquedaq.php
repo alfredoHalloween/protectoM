@@ -24,7 +24,7 @@
             <ul>
            Expediente: <input type='text' id='consulta' name='consulta' placeholder='Teclee el expediente' required>
             <li>
-          <button class="submit" type="submit">Enviar</button>
+          <button type="submit">Enviar</button>
         </li>
         </ul>
         </form>
