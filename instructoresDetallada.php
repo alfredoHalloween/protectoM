@@ -29,7 +29,7 @@
                 <th colspan="<?php echo $numeroColumnas?>">GERENCIA DE INGENIERIA</th>
             </tr>
             <?php
-                imprimirCabeceraInstruccctores();
+                imprimirCabeceraInstructores();
                 
 
                    
