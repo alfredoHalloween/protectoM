@@ -21,32 +21,17 @@
             </div>
         <?php
             $consulta = "SELECT expediente, nombre, puesto, horario, descanso, instructor FROM general WHERE ubicacion=\"GERENCIA DE INGENIERIA\" AND instructor=TRUE ORDER BY nombre;";
-            $hacerConsulta = mysql_query($consulta, $conexion);
-            $numeroColumnas = mysql_num_fields($hacerConsulta);
-            $numeroDeRegistros = mysql_num_rows($hacerConsulta);
-            
-            
+            $hacerConsulta = mysql_query($consulta, $conexion);            
+            $numeroDeRegistros = mysql_num_rows($hacerConsulta);                        
         ?>
         <table border="1" cellpadding="2" cellspacing="1">
             <tr>
                 <th colspan="<?php echo $numeroColumnas?>">GERENCIA DE INGENIERIA</th>
             </tr>
-            <tr>
-                <th>Expediente</th>
-                <th>Nombre</th>
-                <th>Puesto</th>
-                <th>Horario</th>
-                <th>Descanso</th>
-                <th>Cursos que imparte</th>
-            </tr>
             <?php
-                for ($contador=0; $contador<$numeroDeRegistros; $contador ++){           
-                    $expediente=mysql_result ($hacerConsulta, $contador, "expediente");
-                    $nombre=mysql_result ($hacerConsulta, $contador, "nombre");
-                    $puesto=  mysql_result($hacerConsulta, $contador, "puesto");
-                    $horario=mysql_result ($hacerConsulta, $contador, "horario");
-                    $descanso=mysql_result ($hacerConsulta, $contador, "descanso");
-                    $instructor=  @mysql_result($hacerConsulta, $contador, "instructor");
+                imprimirCabeceraInstructores();
+                
+
                    
             ?>
             <tr>
@@ -57,9 +42,6 @@
                 <td><?php echo $descanso; ?></td>        
                 
             </tr>
-            <?php 
-                }
-            ?>
             <tr>
                 <th colspan="<?php echo $numeroColumnas;?>"><?php
                     echo "Total = ".$numeroDeRegistros;

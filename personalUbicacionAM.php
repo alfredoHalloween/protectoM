@@ -43,6 +43,6 @@ and open the template in the editor.
                 }
             ?>
         </table>
-        </div>
+    </div>
     </body>
 </html>

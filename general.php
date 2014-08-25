@@ -30,7 +30,7 @@
            </div>
         <table border="1" cellpadding="2" cellspacing="1">
            <tr> 
-               <th colspan=" 9" "<?php echo $numeroColumnas ?>">Datos generales</th> <th colspan=" 2"> Total =  <?php echo $numeroDeRegistros;?></th> </tr>
+               <th colspan=" 9">Datos generales</th> <th colspan=" 2"> Total =  <?php echo $numeroDeRegistros;?></th> </tr>
            
            <tr>
            <th>Expediente</th>
