@@ -19,13 +19,13 @@
                 <ul>
                     <li><a href='personalCoordinacionGI.php'><img src="img/GI.png" class="grande"></a></li>
                     <br>
-                    <li><a href='.php'><img src="img/CCSFT.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="img/CCO.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCPE.php'><img src="img/CPEC.png"class="grande" ></a></li>
+                    <li><a href='personalCoordinacionCSFT.php'><img src="img/CCSFT.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionCE.php'><img src="img/CCO.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionPEC.php'><img src="img/CPEC.png"class="grande" ></a></li>
                     <br>
-                    <li><a href='.php'><img src="img/CSMMR.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionSMS1.php'><img src="img/CSMMR.png" class="grande"></a></li>
                     <br>
-                    <li><a href='.php'><img src="img/CCMSZ.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionCZ.php'><img src="img/CCMSZ.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCMSC.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCMST.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCMSTL.png" class="grande"></a></li>
