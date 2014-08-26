@@ -30,7 +30,7 @@
                     <li><a href='personalCoordinacionCMSTas.php'><img src="img/CCMST.png" class="grande"></a></li>
                     <li><a href='personalCoordinacionCMTla.php'><img src="img/CCMSTL.png" class="grande"></a></li>
                     <br>
-                    <li><a href='.php'><img src="img/CSMS2.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionSMS2.php'><img src="img/CSMS2.png" class="grande"></a></li>
                     <br>
                     <li><a href='.php'><img src="img/CCMSR.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCMSLP.png" class="grande"></a></li>
