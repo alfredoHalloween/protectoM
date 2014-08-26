@@ -17,11 +17,11 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href='.php'><img src="img/GI.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionGI.php'><img src="img/GI.png" class="grande"></a></li>
                     <br>
                     <li><a href='.php'><img src="img/CCSFT.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCO.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="img/CPEC.png"class="grande" ></a></li>
+                    <li><a href='personalCoordinacionCPE.php'><img src="img/CPEC.png"class="grande" ></a></li>
                     <br>
                     <li><a href='.php'><img src="img/CSMMR.png" class="grande"></a></li>
                     <br>
@@ -34,7 +34,7 @@
                     <br>
                     <li><a href='.php'><img src="img/CCMSR.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCMSLP.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="img/CCMSTI.png" class="grande"></a></li>
+                    <li><a href='personalCoordinacionCMMT.php'><img src="img/CCMSTI.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/CCMSCAZ.png" class="grande"></a></li>
                     <br>
                     <li><a href='.php'><img src="img/CSMS1.png" class="grande"></a></li>
