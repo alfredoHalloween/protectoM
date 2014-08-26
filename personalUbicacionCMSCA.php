@@ -19,6 +19,15 @@ and open the template in the editor.
         ?>  
     </head>
     <body>
+        <div id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="ubicacion2.php" title="Regresar"><img src="img/baatras.png"></a></li>
+                    <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
+                    <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
+                    <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
+                </ul>
+            </div>
         <table cellpadding="2" cellspacing="2" border="2">
             <tr>
                 <th colspan="9">TABLA GENERAL</th>
@@ -33,5 +42,7 @@ and open the template in the editor.
                 }
             ?>
         </table>
+            
+        </div>
     </body>
 </html>
