@@ -219,4 +219,37 @@
             echo "</table>";
         }
     }
+    
+    class cursos {
+        public $totalCurso;
+        public $numCursosCU;
+        public $nombreCurso;
+        public $personas;
+        
+        function imprimirListaCurso($hacerCursos, $fechaSeleccionada) {
+            if($fechaSeleccionada != NULL) {
+                echo "<table cellpadding='2' cellspacing='2' border='2'>
+                    <tr>
+                        <th>NOMBRE CURSOS</th>
+                        <th>TOTAL CURSOS</th>
+                </tr>";
+            
+                $this->totalCurso = mysql_num_rows($hacerCursos);
+                for($i=0; $i < $this->totalCurso; $i++){
+                    $this->nombreCurso = mysql_result($hacerCursos, $i, "nom_curso");
+                    $this->numCursosCU = mysql_result($hacerCursos, $i, "Filas");
+                    echo "<tr>";
+                    echo "<td>$this->nombreCurso</td>";
+                    echo "<td>$this->numCursosCU</td>";
+                    echo "</tr>";
+                    $this->personas+=$this->numCursosCU;
+                }
+                echo "<tr>
+                        <td>Total</td>
+                        <td>$this->personas</td>
+                    </tr>
+                </table>";
+            }    
+        }
+    }
 ?>
