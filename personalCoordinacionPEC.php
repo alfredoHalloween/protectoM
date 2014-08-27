@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I</title>
+        <title>COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN</title>
         <link href="css/movil.css" rel="stylesheet" type="text/css">
         <link href="css/tabla2.css" rel="stylesheet" type="text/css">
         <?php

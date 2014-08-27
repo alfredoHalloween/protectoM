@@ -1,16 +1,17 @@
 table
 {
-    background: darkorange;
+    background: #eb8f00;
     border: solid;
     border-collapse: separate;
     margin: 0 auto;
-/*    margin-top: 1cm; */
+   /*margin-top: 1cm;*/  
     table-layout: inherit;
-    display: run-in;
+    display: table;
     width: auto;
     white-space: pre-wrap;
     font-family: monospace;
     font-size: 18px;
+    
    
     
     
@@ -24,11 +25,13 @@ table
 thead th
 {
     padding: 10px;
+    
 }
 tbody
 {
     text-align: match-parent;
     color: background;
+    color: #000;
     
 }
 tbody td
