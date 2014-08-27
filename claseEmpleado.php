@@ -209,13 +209,17 @@
                         <td>$this->formacion</td> 
                     </tr>   
                     <tr>
-                        <th>Cantidad de cursos tomados</th>
-                        <td>$this->numCursos</td> 
-                    </tr>
-                    <tr>
+                    echo <th>Cantidad de cursos tomados</th>";
+                    if ($this->numCursos == 0) {
+                        echo "<td>NINGUNO</td>";
+                    } else {                       
+                        echo "<td>$this->numCursos</td>";
+                        echo "</tr>
+                        <tr>
                         <th>Cursos tomados</th>
-                        <td>$this->cadenaCurso</td> 
-                    </tr>";  
+                        <td>$this->cadenaCurso</td>"; 
+                    }
+                    echo "</tr>";  
             echo "</table>";
         }
     }
