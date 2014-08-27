@@ -7,7 +7,7 @@ table
 /*    margin-top: 1cm; */
     table-layout: inherit;
     display: run-in;
-    width: 100%;
+    width: auto;
     white-space: pre-wrap;
     font-family: monospace;
     font-size: 18px;
