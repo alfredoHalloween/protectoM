@@ -39,13 +39,30 @@ and open the template in the editor.
                     });
                 });
         </script>
+        <?php
+            require 'usarBD.php';
+            require_once 'claseEmpleado.php';
+            $fechaHoy = date("Y-m-d");
+        ?>
     </head>
     <body>
 	<div>	      
-            <form action="">
+            <form action="calendario.php" name="formFecha" id="formFecha" method="post">
                 <label> Seleccionar Fecha:</label>
                 <input type="text" name="datepicker" id="datepicker" readonly="readonly" size="12" />
+                <button type="submit">Enviar</button>
             </form>
         </div>
+        <?php            
+            $fechaSeleccionada=$_POST["datepicker"];
+            $consultaFecha = "SELECT COUNT( * ) AS  `Filas` ,  `nom_curso` FROM  `cursos` WHERE ini_curso <= '$fechaSeleccionada' GROUP BY `nom_curso` ORDER BY `nom_curso`"; 
+            $hacerFecha = mysql_query($consultaFecha, $conexion);    
+            $lista = new cursos();            
+        ?>
+        <?php
+            $lista->imprimirListaCurso($hacerFecha, $fechaSeleccionada);
+        ?>
+        </table>
+          
     </body>
 </html>
