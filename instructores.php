@@ -18,7 +18,9 @@
                     <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
                     <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
-                </ul>                    
+                </ul>  
+                <br>
+                <br>
                 <table id="instructores" cellpadding="2" cellspacing="2" border="2">
                     <tr>
                         <th>TALLER</th>
