@@ -209,7 +209,7 @@
                         <td>$this->formacion</td> 
                     </tr>   
                     <tr>
-                    echo <th>Cantidad de cursos tomados</th>";
+                   <th>Cantidad de cursos tomados</th>";
                     if ($this->numCursos == 0) {
                         echo "<td>NINGUNO</td>";
                     } else {                       

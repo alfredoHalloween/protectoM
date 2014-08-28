@@ -6,10 +6,28 @@ and open the template in the editor.
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>CALENDARIO</title>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.7.2.custom.css" />
+        <link href="css/movil.css" rel="stylesheet" type="text/css">  
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>        
+        
+    </head>
+        
+        
+    <body>
+            
+        <div id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="menu.php" title="Regresar"><img src="img/baatras.png"></a></li>
+                    <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
+                    <li><a href="contacto.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
+                    <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
+                </ul>
+            </div>
+            
         <script type="text/javascript">
             jQuery(function($){
                 $.datepicker.regional['es'] = {
@@ -39,13 +57,13 @@ and open the template in the editor.
                     });
                 });
         </script>
+        
         <?php
             require 'usarBD.php';
             require_once 'claseEmpleado.php';
             $fechaHoy = date("Y-m-d");
         ?>
-    </head>
-    <body>
+    
 	<div>	      
             <form action="calendario.php" name="formFecha" id="formFecha" method="post">
                 <label> Seleccionar Fecha:</label>
@@ -53,6 +71,7 @@ and open the template in the editor.
                 <button type="submit">Enviar</button>
             </form>
         </div>
+        
         <?php            
             $fechaSeleccionada=$_POST["datepicker"];
             $consultaFecha = "SELECT COUNT( * ) AS  `Filas` ,  `nom_curso` FROM  `cursos` WHERE ini_curso <= '$fechaSeleccionada' GROUP BY `nom_curso` ORDER BY `nom_curso`"; 
@@ -62,7 +81,7 @@ and open the template in the editor.
         <?php
             $lista->imprimirListaCurso($hacerFecha, $fechaSeleccionada);
         ?>
-        </table>
+        
           
     </body>
 </html>
