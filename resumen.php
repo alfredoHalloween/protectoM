@@ -22,10 +22,7 @@
  <div id="menu">
                 <ul>
                     <li><a href='coordinacion1.php'><img src="img/ccoordinacion.png" class="grande"></a></li>
-                     <li><a href='.php'><img src="img/cubicacion2.png" class="grande"></a></li>
-                     
-                    
-                   
+                     <li><a href='ubicacion1.php'><img src="img/cubicacion2.png" class="grande"></a></li>                                                            
                 </ul>
             </div>
         </div>

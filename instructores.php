@@ -28,7 +28,7 @@
             </tr>
             
             <?php
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"GERENCIA DE INGENIERIA\";";
+                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"GERENCIA DE INGENIERÍA\";";
                 $hacerConsulta = mysql_query($consulta, $conexion);
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);
                 $total=$total+$numeroDeRegistros;
@@ -50,7 +50,7 @@
             </tr>
             
             <?php
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN ELECTRÓNICA\";";
+                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE ELECTRÓNICA\";";
                 $hacerConsulta = mysql_query($consulta, $conexion);
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);    
                 $total=$total+$numeroDeRegistros;
@@ -84,7 +84,7 @@
             </tr>
             
             <?php
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTITUCIÓN DE 1917\";";
+                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTITUCIÓN 1917\";";
                 $hacerConsulta = mysql_query($consulta, $conexion);
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);   
                 $total=$total+$numeroDeRegistros;
@@ -96,7 +96,7 @@
             </tr>
             
             <?php
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TAXQUEÑA\";";
+                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TASQUEÑA\";";
                 $hacerConsulta = mysql_query($consulta, $conexion);
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);   
                 $total=$total+$numeroDeRegistros;
@@ -201,7 +201,7 @@
             </tr>
             
             <?php
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMAN\";";
+                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN\";";
                 $hacerConsulta = mysql_query($consulta, $conexion);
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta); 
                 $total=$total+$numeroDeRegistros;
@@ -212,7 +212,7 @@
             </tr>
             
             <?php
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN REHABILITACIÓN DE TRENES\";";
+                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND ubicacion=\"COORDINACIÓN DE REHABILITACIÓN DE TRENES\";";
                 $hacerConsulta = mysql_query($consulta, $conexion);
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);     
                 $total=$total+$numeroDeRegistros;

@@ -256,4 +256,19 @@
             }    
         }
     }
+    
+    function totalCapacitados($hacerConsulta, $conexion) {  
+        require 'usarBD.php'; 
+        $contarCursos = 0;
+        $totalEnGerencia = mysql_num_rows($hacerConsulta);
+        for ($i = 0; $i < $totalEnGerencia; $i++) {
+            $expedienteCurso = mysql_result($hacerConsulta, $i, "expediente");
+            $cursosTomados = "SELECT * FROM cursos WHERE expediente = $expedienteCurso;";
+            $hacerCursosTomados = mysql_query($cursosTomados, $conexion);
+            $totalHacerCursosTomados = @mysql_num_rows($hacerCursosTomados);
+            if ($totalHacerCursosTomados != 0) 
+                $contarCursos++;
+        }
+        return $contarCursos;
+    }
 ?>
