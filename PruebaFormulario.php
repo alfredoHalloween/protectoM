@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
         
 </head>
 <body>
-     <div id="content">
+    <div id="content">
             <div id="nav">
                 <ul>
                     <li><a href="capa1.php" title="Regresar"><img src="img/baatras.png"></a></li>
@@ -17,15 +18,26 @@
                     <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
                 </ul>
-             
-    <form  action="" method="POST">
-        <table>
-             <tr><td><LABEL for="expediente">Expediente: </LABEL> </td><td><input type="text" name="expediente" required/></td></tr>
-             <tr><td><LABEL for="nombre">Nombre: </LABEL></td><td><input type="text" name="nombre" required/></td></tr>
-             <tr><td><LABEL for="puesto">Puesto: </LABEL></td><td><input type="text" name="puesto" required/></td></tr>
-             <tr><td>Adscripción:</td><td>   
-             <select name='Adscripción' required>
-                <option></option>
+     <form action="" method="post" class="smart-green">
+    <h1>CAPTURA DE INSTRUCTORES
+        <span>INGRESA LOS SIGUIENTES DATOS PARA AGREGAR UN INSTRUCTOR</span>
+    </h1>
+    <label>
+        <span>Expediente:</span>
+        <input type="text" name="expediente" required/>
+    </label>
+    <label>
+        <span>Nombre:</span>
+        <input type="text" name="nombre" required/>
+    </label>
+   
+    <label>
+        <span>Puesto:</span>
+        <input type="text" name="puesto" required/>
+    </label>
+     <label>
+        <span>Adscripcion:</span><select name='Adscripción' required>
+        <option></option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMAN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMAN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA</option>
@@ -45,23 +57,38 @@
                 <option value='SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN'>SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN</option>
                 <option value='SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I'>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I</option>
                 <option value='SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II'>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II</option>
-             </select>
-            
-            </td></tr>
-            <tr><td><LABEL for="plaza">Plaza: </LABEL></td><td><input type="text" name="plaza" required/></td></tr>
-            <tr><td><LABEL for="side">Siden:</LABEL></td><td><input type="text" name="siden" required/></td></tr>
-            <tr><td><LABEL for="calidad">Calidad: </LABEL></td><td>
+             
+        </select>
+    </label>  
+   <label>
+        <span>Plaza:</span>
+        <input type="text" name="plaza" required/>
+    </label>
+   <label>
+        <span>Siden:</span>
+        <input type="text" name="siden" required/>
+    </label>
+    <label> <span>Calidad:</span></label>
             <input type="radio" name='calidad' value='base' required/> BASE
             <input type="radio" name='calidad' value='confianza' required/> CONFIANZA
             <input type="radio" name='calidad' value='estructura' required/> ESTRUCTURA
             <input type="radio" name='calidad' value='honorarios' required/> HONORARIOS
-            </td></tr>
-            <tr><td><LABEL for="area">ÁREA:</LABEL></td><td><input type="text" name="area" required/></td></tr>
-            <tr><td><LABEL for="horario">Horario:</LABEL></td><td><input type="text" name="horario" placeholder='EJEMPLO:07:00 A 15:00' required/></td></tr>
-            <tr><td><LABEL for="descanso">Descanso: </LABEL></td><td><input type="text" name="descanso" placeholder='EJEMPLO: S Y D, L Y M.' required/></td></tr>
-            <tr><td>Ultimo grado de estudios:</td><td>  
-            <select name='estudios' required>
-                       <option></option>
+            
+    <label>
+        <span>Área:</span>
+        <input type="text" name="area" required/>
+    </label>
+    <label>
+        <span>Horario:</span>
+        <input type="text" name="horario" placeholder='EJEMPLO:07:00 A 15:00' required/>
+    </label>
+    <label>
+        <span>Descanso:</span>
+        <input type="text" name="descanso" placeholder='EJEMPLO: S Y D, L Y M.' required/>
+    </label>
+    <label>
+        <span>Ultimo grado de estudios:</span><select name='estudios' required>
+            <option></option>
                        <option value='Primaria'>Primaria</option>
                        <option value='Secundaria'>Secundaria</option>
                        <option value='Especialidades'>Especialidades(Carrera Tecnica)</option>
@@ -70,31 +97,40 @@
                        <option value='Posgrado'>Posgrado</option>
                        <option value='Maestria'>Maestria</option>
                        <option value='Doctorado'>Doctorado</option>
-            </select>
-           </td></tr>
-            <tr><td><LABEL for="concluido">¿Concluido?: </LABEL> </td><td>
-            <input type="radio" name='concluido' value='si' required/> Si
-            <input type="radio" name='concluido' value='no' required/> No
-            </td></tr>
-            <tr><td><LABEL for="extension">Extension: </LABEL></td><td><input type="text" name="extension" required/></td></tr>
-            <tr><td><LABEL for="correo">Correo: </LABEL></td><td><input type="text" name="correo"  required/></td></tr>
-            <tr><td><LABEL for="instructor">Instructor: </LABEL></td><td>
-            <input type="radio" name='instructor' value='si' required/> Si
-            <input type="radio" name='instructor' value='no' required/> No
-            </td></tr>
-            <tr><td><LABEL for="formacion">¿Tomo el curso de formación de instructores? </LABEL></td><td>
-            <input type="radio" name='formacion' value='si' required/> Si
-            <input type="radio" name='formacion' value='no' required/> No
-            </td></tr>
-            <tr ><td>
-               <button class="submit" type="submit">Enviar Datos</button>
-            </td></tr>
-               
-        </table>
-      
-    </form>
+            
+        </select>
+    </label>
+    <label> <span>¿Concluido?:</span></label>
+           <input type="radio" name='concluido' value='si' required/> Si
+           <input type="radio" name='concluido' value='no' required/> No
     
-     </div>
-</div>
+    <label>
+        <span>Extension:</span>
+        <input type="text" name="extension" required/>
+    </label>        
+   <label>
+        <span>Correo:</span>
+        <input type="text" name="correo"  required/>
+    </label> 
+           
+    <label> <span>Instructor:</span></label>
+           <input type="radio" name='instructor' value='si' required/> Si
+            <input type="radio" name='instructor' value='no' required/> No
+            <br>   
+    <label>
+        <span>¿Tomo el curso de formación de instructores?</span></label>
+        <input type="radio" name='formacion' value='si' required/> Si
+        <input type="radio" name='formacion' value='no' required/> No
+    
+        <br>   
+        <br>
+        
+     <label>
+        
+        <input type="button" class="button" value="enviar datos" />
+    </label>    
+</form>
+            </div>
+    </div>
 </body>
 </html>
