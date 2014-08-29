@@ -235,7 +235,7 @@
             if($fechaSeleccionada != NULL) {
                 echo "<table cellpadding='2' cellspacing='2' border='2'>
                     <tr>
-                        <th>NOMBRE CURSOS</th>
+                        <th>NOMBRE CURSOS (AL $fechaSeleccionada)</th>
                         <th>TOTAL CURSOS</th>
                 </tr>";
             
@@ -250,8 +250,8 @@
                     $this->personas+=$this->numCursosCU;
                 }
                 echo "<tr>
-                        <td>Total</td>
-                        <td>$this->personas</td>
+                        <th>Total</th>
+                        <th>$this->personas</th>
                     </tr>
                 </table>";
             }    
