@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href='instructores.php'><img src="img/brgeneral.png" class="grande"></a></li>
                     <li><a href='instructoresDetallada.php'><img src="img/cdetallada.png" class="grande"></a></li>
-                     <li><a href='coordinacion2.php'><img src="img/carea.png" class="grande" ></a></li>
+                     <li><a href='coordinacion2.php'><img src="img/ccoordi.png" class="grande" ></a></li>
                      <li><a href='ubicacion2.php'><img src="img/cubicacion2.png" class="grande" ></a></li>
 <!--                     <li><a href='.php'><img src="img/CRT.png" class="grande" ></a></li>-->
                      

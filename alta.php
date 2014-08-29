@@ -11,7 +11,7 @@
         <div id="content">
             <div id="nav">
                 <ul>
-                    <li><a href="menu.php" title="Regresar"><img src="img/baatras.png"></a></li>
+                    <li><a href="capacitacion.php" title="Regresar"><img src="img/baatras.png"></a></li>
                     <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
                     <li><a href="contacto.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
@@ -24,8 +24,7 @@
                     <li><a href='.php'><img src="img/coficios.png" class="grande"></a></li>
                     <li><a href='.php'><img src="img/cmanuales.png" class="grande"></a></li>
                     <li><a href='personal1.php'><img src="img/cpersonal.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="img/CRP.png" class="grande" ></a></li>
-                    <li><a href='alta.php'><img src="img/calta.png" class="grande" ></a></li>
+
                    
                 </ul>
             </div>
