@@ -76,7 +76,8 @@
             echO "<td>$this->descanso</td>";
             echo "<td>$this->grado</td>";
             echo "<td>$this->concluido</td>";
-            echo "<td>$this->extension</td>"; 
+            echo "<td>$this->extension</td>";
+            echo "<td>$this->correo</td>";
             echo "<td>$this->instructor</td>"; 
             echo "<td>$this->formacion</td>"; 
             echo "<tr>";

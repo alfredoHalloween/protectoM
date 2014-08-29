@@ -3,13 +3,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TLÁHUAC</title>
+        <title>COORDINACIÓN DE MANTENIMIENTO TLÁHUAC</title>
         <link href="css/movil.css" rel="stylesheet" type="text/css">
         <link href="css/tabla2.css" rel="stylesheet" type="text/css">
         <?php
             require 'usarBD.php';            
             require 'claseEmpleado.php';
-            $consulta = "SELECT * FROM general WHERE coordinacion=\"COORDINACIÓN DE MANTENIMIENTO TLÁHUAC\";";
+            $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion=\"COORDINACIÓN DE MANTENIMIENTO TLÁHUAC\";";
             $hacerConsulta = mysql_query($consulta, $conexion);
             $numeroDeRegistros = mysql_num_rows($hacerConsulta);
         ?>  
@@ -23,21 +23,27 @@
                     <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
                 </ul>
-                  </div>
-        <table cellpadding="2" cellspacing="2" border="2">
-            <tr>
-                <th colspan="9">TABLA GENERAL</th>
-                <th colspan='2'>Total = <?php echo $numeroDeRegistros; ?></th>
-            </tr>
+            </div>
             <?php
-                imprimirCabecera();
-                $empleadoActual = new empleado();
-                for ($i = 0; $i < $numeroDeRegistros; $i++) {
-                    $empleadoActual->asignar($hacerConsulta, $i);
-                    $empleadoActual->imprimirEmpleado();
+                if($numeroDeRegistros != 0) {
+                    echo "<table cellpadding='2' cellspacing='2' border='2'>
+                            <tr>
+                                <th colspan='9'>TABLA GENERAL</th>
+                                <th colspan='2'>Total = $numeroDeRegistros</th>
+                            </tr>";                
+                    imprimirCabecera();
+                    $empleadoActual = new empleado();
+                    for ($i = 0; $i < $numeroDeRegistros; $i++) {
+                        $empleadoActual->asignar($hacerConsulta, $i);
+                        $empleadoActual->imprimirEmpleado();
+                    }
+                    echo "</table>";
+                } else {                    
+                    echo "<table cellpading='2' cellspacing='2' border='2'>
+                            <td>NO HAY REGISTROS DISPONIBLES</td>
+                        </table>";
                 }
             ?>
-        </table>
         </div>
     </body>
 </html>

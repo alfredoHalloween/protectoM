@@ -10,7 +10,7 @@
             <?php
             require 'usarBD.php';            
             require 'claseEmpleado.php';
-            $consulta = "SELECT * FROM general WHERE coordinacion=\"COORDINACIÓN DE ELECTRÓNICA\";";
+            $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion=\"COORDINACIÓN DE ELECTRÓNICA\";";
             $hacerConsulta = mysql_query($consulta, $conexion);
             $numeroDeRegistros = mysql_num_rows($hacerConsulta);
         ?>  
@@ -24,23 +24,27 @@
                     <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
                 </ul>
-                  </div>
-                 
-         
-         <table cellpadding="2" cellspacing="2" border="2">
-            <tr>
-                <th colspan="18">TABLA GENERAL</th>
-                
-            </tr>
+            </div>
             <?php
-                imprimirCabecera();
-                $empleadoActual = new empleado();
-                for ($i = 0; $i < $numeroDeRegistros; $i++) {
-                    $empleadoActual->asignar($hacerConsulta, $i);
-                    $empleadoActual->imprimirEmpleado();
+                if($numeroDeRegistros != 0) {
+                    echo "<table cellpadding='2' cellspacing='2' border='2'>
+                            <tr>
+                                <th colspan='9'>TABLA GENERAL</th>
+                                <th colspan='2'>Total = $numeroDeRegistros</th>
+                            </tr>";                
+                    imprimirCabecera();
+                    $empleadoActual = new empleado();
+                    for ($i = 0; $i < $numeroDeRegistros; $i++) {
+                        $empleadoActual->asignar($hacerConsulta, $i);
+                        $empleadoActual->imprimirEmpleado();
+                    }
+                    echo "</table>";
+                } else {                    
+                    echo "<table cellpading='2' cellspacing='2' border='2'>
+                            <td>NO HAY REGISTROS DISPONIBLES</td>
+                        </table>";
                 }
             ?>
-        </table>
         </div>
     </body>
 </html>
