@@ -227,33 +227,43 @@
     
     class cursos {
         public $totalCurso;
-        public $numCursosCU;
-        public $nombreCurso;
-        public $personas;
-        
+        public $fechaDeInicio;
+        public $fechaDeTermino;
+        public $comprobacion;
+        public $indice = "";
+        public $bandera;
+                        
         function imprimirListaCurso($hacerCursos, $fechaSeleccionada) {
-            if($fechaSeleccionada != NULL) {
-                echo "<table cellpadding='2' cellspacing='2' border='2'>
-                    <tr>
-                        <th>NOMBRE CURSOS (AL $fechaSeleccionada)</th>
-                        <th>TOTAL CURSOS</th>
-                </tr>";
-            
+            if($fechaSeleccionada != NULL) {            
                 $this->totalCurso = mysql_num_rows($hacerCursos);
-                for($i=0; $i < $this->totalCurso; $i++){
-                    $this->nombreCurso = mysql_result($hacerCursos, $i, "nom_curso");
-                    $this->numCursosCU = mysql_result($hacerCursos, $i, "Filas");
-                    echo "<tr>";
-                    echo "<td>$this->nombreCurso</td>";
-                    echo "<td>$this->numCursosCU</td>";
-                    echo "</tr>";
-                    $this->personas+=$this->numCursosCU;
+                if($this->totalCurso != 0) {
+                    echo "<table cellpadding='2' cellspacing='2' border='2'>
+                        <tr>
+                            <th>NOMBRE CURSOS (AL $fechaSeleccionada)</th>
+                            <th>FECHA DE INICIO</th>
+                            <th>FECHA DE TÉRMINO</th>
+                        </tr>";
+                    for($i=0; $i < $this->totalCurso; $i++){
+                        $this->nombreCurso = mysql_result($hacerCursos, $i, "nom_curso");
+                        $this->fechaDeInicio = mysql_result($hacerCursos, $i, "ini_curso");
+                        $this->fechaDeTermino = mysql_result($hacerCursos, $i, "fin_curso");
+                        $this->comprobacion = "$this->nombreCurso $this->fechaDeInicio $this->fechaDeTermino";
+                        $this->bandera = strcmp($this->comprobacion, $this->indice);
+                    
+                        if($this->bandera != 0) {
+                            echo "<tr>";
+                            echo "<td>$this->nombreCurso</td>";
+                            echo "<td>$this->fechaDeInicio</td>";
+                            echo "<td>$this->fechaDeTermino</td>";
+                            echo "</tr>";                    
+                            $this->indice = $this->comprobacion;
+                        }
+                    }                         
+                } else {
+                    echo "<table cellpadding='2' cellspacing='2' border='2'>
+                        <td>NO HAY CURSOS DISPONIBLLES</td>";
                 }
-                echo "<tr>
-                        <th>Total</th>
-                        <th>$this->personas</th>
-                    </tr>
-                </table>";
+                echo "</table>";
             }    
         }
     }

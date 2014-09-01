@@ -19,34 +19,34 @@
                 <ul>
                     
                     
-                    <li><a href='personalCoordinacionCSFT.php'><img src="img/CCSFT.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCE.php'><img src="img/CCO.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionPEC.php'><img src="img/CPEC.png"class="grande" ></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE REHABILITACIÓN DE TRENES';?>'><img src="img/CCSFT.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE ELECTRÓNICA';?>'><img src="img/CCO.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN';?>'><img src="img/CPEC.png"class="grande" ></a></li>
                     
                     
                     
-                    <li><a href='personalCoordinacionCZ.php'><img src="img/CCMSZ.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMSC1917.php'><img src="img/CCMSC.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMSTas.php'><img src="img/CCMST.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMTla.php'><img src="img/CCMSTL.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA';?>'><img src="img/CCMSZ.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTITUCIÓN 1917';?>'><img src="img/CCMSC.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TASQUEÑA';?>'><img src="img/CCMST.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO TLÁHUAC';?>'><img src="img/CCMSTL.png" class="grande"></a></li>
                     
                    
                     
-                    <li><a href='personalCoordinacionCMSR.php'><img src="img/CCMSR.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMSLP.php'><img src="img/CCMSLP.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMSTic.php'><img src="img/CCMSTI.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMSCA.php'><img src="img/CCMSCAZ.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ROSARIO';?>'><img src="img/CCMSR.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO LA PAZ';?>'><img src="img/CCMSLP.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN';?>'><img src="img/CCMSTI.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA';?>'><img src="img/CCMSCAZ.png" class="grande"></a></li>
                     
                     
                     
-                    <li><a href='personalCoordinacionCMMZ.php'><img src="img/CCMMZ2.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCMMT.php'><img src="img/CCCMTIC.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionCRT.php'><img src="img/CCRT.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA';?>'><img src="img/CCMMZ2.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN';?>'><img src="img/CCCMTIC.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=COORDINACIÓN DE REHABILITACIÓN DE TRENES';?>'><img src="img/CCRT.png" class="grande"></a></li>
                     
-                    <li><a href='personalCoordinacionSMMR.php'><img src="img/CSMS1.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionSMS2.php'><img src="img/CSMS2.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionSMS1.php'><img src="img/CSMMR.png" class="grande"></a></li>
-                    <li><a href='personalCoordinacionGI.php'><img src="img/GI.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN';?>'><img src="img/CSMS1.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II';?>'><img src="img/CSMS2.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I';?>'><img src="img/CSMMR.png" class="grande"></a></li>
+                    <li><a name="coordinacion" href='<?php echo 'personalCoordinacion.php?coordinacion=GERENCIA DE INGENIERÍA';?>'><img src="img/GI.png" class="grande"></a></li>
                 </ul>
             </div>
         </div>
