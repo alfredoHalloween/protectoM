@@ -1,7 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,22 +10,13 @@ and open the template in the editor.
         <link href="css/estilos.css" rel="stylesheet" type="text/css">  
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>        
-        
-    </head>
-        
-        
-    <body>
-            
-        <div id="content">
-            <div id="nav">
-                <ul>
-                    <li><a href="capacitacion.php" title="Regresar"><img src="img/baatras.png"></a></li>
-                    <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
-                    <li><a href="contacto.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
-                    <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
-                </ul>
-            </div>
-            
+        <?php 
+            if(isset($_POST['datepicker'])) {
+                $datepicker = $_POST['datepicker'];
+            } else {
+                $datepicker = date("Y-m-d");
+            }
+        ?>
         <script type="text/javascript">
             jQuery(function($){
                 $.datepicker.regional['es'] = {
@@ -59,37 +46,40 @@ and open the template in the editor.
                     });
                 });
         </script>
-        
-        <?php
-            require 'usarBD.php';
-            require_once 'claseEmpleado.php';
-            $fechaHoy = date("Y-m-d");   
-            if(@$fechaSeleccionada == NULL) {
-                $fechaSeleccionada = $fechaHoy;
-            }                     
-        ?>
-    
-	<div>	                  
-            <form action="calendario.php" name="formFecha" id="formFecha" method="post">
-                <label> Seleccionar Fecha:</label>
-                <input type="text" name="datepicker" id="datepicker" readonly="readonly" size="12"  value="<?php echo $fechaSeleccionada;?>"/>
-                <button type="submit">Enviar</button>
-            </form>
+    </head>                
+    <body>            
+        <div id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="capacitacion.php" title="Regresar"><img src="img/baatras.png"></a></li>
+                    <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
+                    <li><a href="contacto.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
+                    <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>                    
+                
+                <?php
+                    require 'usarBD.php';
+                    require_once 'claseEmpleado.php';                    
+                ?>
+                <br>
+                <br>
+                <div>	                  
+                    <form action="<?php echo "calendario.php?datepicker=".$datepicker; ?>" name="formFecha" id="formFecha" method="post">
+                        <label> Seleccionar Fecha:</label>
+                        <input type="text" name="datepicker" id="datepicker" readonly="readonly" size="12"  value="<?php echo $datepicker;?>"/>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <br>
+                <br>
+                <?php              
+                    $consultaFecha = "SELECT nom_curso, ini_curso, fin_curso FROM cursos WHERE ini_curso<=STR_TO_DATE('$datepicker','%Y-%m-%d') AND 
+                        fin_curso>=STR_TO_DATE('$datepicker','%Y-%m-%d') ORDER BY nom_curso, ini_curso, fin_curso ASC;"; 
+                    $hacerFecha = mysql_query($consultaFecha, $conexion);    
+                    $lista = new cursos();                                    
+                    $lista->imprimirListaCurso($hacerFecha, $datepicker);
+                ?>
+                </ul> 
+            </div>
         </div>
-        <br>
-        <br>
-        <?php   
-            $fechaSeleccionada=@$_POST["datepicker"];   
-            
-            $consultaFecha = "SELECT nom_curso, ini_curso, fin_curso FROM cursos WHERE ini_curso<=STR_TO_DATE('$fechaSeleccionada','%Y-%m-%d') AND 
-                fin_curso>=STR_TO_DATE('$fechaSeleccionada','%Y-%m-%d') ORDER BY nom_curso, ini_curso, fin_curso ASC;"; 
-            $hacerFecha = mysql_query($consultaFecha, $conexion);    
-            $lista = new cursos();            
-        ?>
-        <?php
-            $lista->imprimirListaCurso($hacerFecha, $fechaSeleccionada);
-        ?>
-        
-          
     </body>
 </html>
