@@ -30,7 +30,7 @@
                     <li><a href='parquevehicular.php'><img src="img/bmparquevehicular.png" class="grande"></a></li>
                     <li><a href='estadmye.php'> <img src="img/bmestadisticas.png" class="grande"></a></li>
                     <li><a href='estgmye.php'> <img src="img/bmgraficas.png" class="grande"></a></li>
-                    <li><a href='capacitacion.php'><img src="img/bbcapa.png" class="grande"></a></li>
+                    <li><a href='capacitacion/capacitacion.php'><img src="img/bbcapa.png" class="grande"></a></li>
                 </ul>
             </div>
         </div>

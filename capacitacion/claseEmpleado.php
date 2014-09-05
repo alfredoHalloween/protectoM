@@ -18,6 +18,9 @@
         public $correo;
         public $instructor;
         public $formacion;
+        public $numCursos;      
+        public $cadena;
+        public $temp;
                 
         function asignar($hacerConsulta, $contador) {
             $this->expediente = mysql_result($hacerConsulta, $contador, "expediente");
@@ -59,6 +62,14 @@
             } else {
                 $this->formacion="NO";
             }
+            $this->cadena="";
+            $cursosConsulta = "SELECT * FROM cursos WHERE expediente=$this->expediente;";
+            $hacerCursos = mysql_query($cursosConsulta);
+            $this->numCursos = mysql_num_rows($hacerCursos);
+            for($i = 0; $i < $this->numCursos; $i++) {                
+                $this->temp=mysql_result($hacerCursos, $i, "nom_curso");
+                $this->cadena.="*$this->temp<br>";
+            }
         }             
         function imprimirEmpleado() {
             echo "<tr>";
@@ -79,33 +90,37 @@
             echo "<td>$this->extension</td>";
             echo "<td>$this->correo</td>";
             echo "<td>$this->instructor</td>"; 
-            echo "<td>$this->formacion</td>"; 
+            echo "<td>$this->formacion</td>";
+            if($this->instructor == TRUE) {
+                echo "<td>$this->cadena</td>";
+            }
             echo "<tr>";
         }
-    }    
-    
-    function imprimirCabecera() {
-        echo "<tr>
-            <th>Expediente</th>
-            <th>Nombre</th>
-            <th>Puesto</th>
-            <th>Adscripción</th>
-            <th>Ubicación</th>
-            <th>Coordinación</th>
-            <th>Plaza</th>
-            <th>Siden</th>
-            <th>Calidad</th>
-            <th>Área</th>
-            <th>Horario</th>
-            <th>Descanso</th>
-            <th>Último grado de estudios</th>
-            <th>¿Estudios concluidos?</th>
-            <th>Extensión</th>
-            <th>E-MAIL</th>
-            <th>¿Es instructor?</th>
-            <th>¿Tomó curso de formación?</th>
-        </tr>";
+        
+        function imprimirCabecera() {
+            echo "<tr>
+                <th>Expediente</th>
+                <th>Nombre</th>
+                <th>Puesto</th>
+                <th>Adscripción</th>
+                <th>Ubicación</th>
+                <th>Coordinación</th>
+                <th>Plaza</th>
+                <th>Siden</th>
+                <th>Calidad</th>
+                <th>Área</th>
+                <th>Horario</th>
+                <th>Descanso</th>
+                <th>Último grado de estudios</th>
+                <th>¿Estudios concluidos?</th>
+                <th>Extensión</th>
+                <th>E-MAIL</th>
+                <th>¿Es instructor?</th>
+                <th>¿Tomó curso de formación?</th>";                
+                echo "<th>Cursos que imparte</th>";            
+            echo "</tr>";
     }
+    }        
     
     class empleadoPersonal extends empleado {
         public $cadenaCurso;
@@ -268,8 +283,8 @@
         }
     }
     
-    function totalCapacitados($hacerConsulta, $conexion) {  
-        require 'usarBD.php'; 
+    function totalCapacitados($hacerConsulta) {  
+        require 'conexion.php'; 
         $contarCursos = 0;
         $totalEnGerencia = mysql_num_rows($hacerConsulta);
         for ($i = 0; $i < $totalEnGerencia; $i++) {
@@ -281,5 +296,40 @@
                 $contarCursos++;
         }
         return $contarCursos;
+    }
+    
+    class periodoResumen {
+        public $ini_curso;
+        public $fin_curso;
+        public $nom_curso;
+        public $totalInscritos;
+        public $temporalNombre;
+        public $temporalIni;
+        public $temporalFin;
+                
+        function imprimir() {
+            echo "<table cellpading='2' celspacing='2' border='2'";            
+        }
+        function obtenerDatos($consultaRealizada) {            
+            $totalInscritos=  mysql_num_rows($consultaRealizada);
+            for($i = 0; $i < $totalInscritos; $i++) {
+                $this->nom_curso=  mysql_result($consultaRealizada, $i, "nom_curso");
+                $this->ini_curso=  mysql_result($consultaRealizada, $i, "ini_curso");    
+                $this->fin_curso=  mysql_result($consultaRealizada, $i, "fin_curso");
+                
+                if(($this->temporalNombre != $this->nom_curso)
+                and ($this->temporalIni != $this->ini_curso)
+                and ($this->temporalFin != $this->fin_curso)) {
+                    echo "<tr>
+                            <td>$this->nom_curso</td>
+                            <td>$this->ini_curso</td>
+                            <td>$this->fin_curso</td>
+                        </td>";
+                    $this->temporalNombre=  $this->nom_curso;
+                    $this->temporalIni=  $this->ini_curso;
+                    $this->temporalFin=  $this->fin_curso;
+                }
+            } 
+        }
     }
 ?>

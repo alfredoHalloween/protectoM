@@ -3,18 +3,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>COORDINACIÓN DE ELECTRÓNICA</title>
-        <link href="css/movil.css" rel="stylesheet" type="text/css">
-        <link href="css/tabla2.css" rel="stylesheet" type="text/css"> 
+        <title>INSTRUCTORES POR COORDINACIÓN</title>
+        <link href="../css/movil.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2.css" rel="stylesheet" type="text/css"> 
     </head>
     <body>
         <div id="content">
             <div id="nav">
                 <ul>
-                    <li><a href="coordinacion2.php" title="Regresar"><img src="img/baatras.png"></a></li>
-                    <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
-                    <li><a href="ayuda.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
-                    <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>
+                    <li><a href="coordinacion2.php" title="Regresar"><img src="../img/baatras.png"></a></li>
+                    <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
+                    <li><a href="ayuda.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
+                    <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>
             </div>
             <?php                                      
@@ -26,7 +26,7 @@
                         <tr><td>ERROR EN LA PÁGINA</td></tr>
                     </table>";
                 }         
-                require 'usarBD.php';            
+                require 'conexion.php';            
                 require 'claseEmpleado.php';
                 $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion='$coordinacion';";
                 $hacerConsulta = mysql_query($consulta, $conexion);
@@ -37,9 +37,9 @@
                             <tr>
                                 <th colspan='9'>TABLA GENERAL</th>
                                 <th colspan='2'>Total = $numeroDeRegistros</th>
-                            </tr>";                
-                    imprimirCabecera();
+                            </tr>";                                    
                     $empleadoActual = new empleado();
+                    $empleadoActual->imprimirCabecera();
                     for ($i = 0; $i < $numeroDeRegistros; $i++) {
                         $empleadoActual->asignar($hacerConsulta, $i);
                         $empleadoActual->imprimirEmpleado();

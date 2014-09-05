@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>CALENDARIO</title>
-        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.7.2.custom.css" />
-        <link href="css/movil.css" rel="stylesheet" type="text/css">  
-        <link href="css/tabla2.css" rel="stylesheet" type="text/css">  
-        <link href="css/estilos.css" rel="stylesheet" type="text/css">  
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>        
         <?php 
             if(isset($_POST['datepicker'])) {
                 $datepicker = $_POST['datepicker'];
@@ -17,6 +8,18 @@
                 $datepicker = date("Y-m-d");
             }
         ?>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>CURSOS DISPONIBLES AL DIA <?php echo $datepicker;?></title>
+        <link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.7.2.custom.css" />
+        <link href="../css/movil.css" rel="stylesheet" type="text/css">  
+        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">  
+        <link href="../css/estilos.css" rel="stylesheet" type="text/css">  
+        <script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.9.1d.js"></script>
+        <script type="text/javascript" src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.ui.datepicker-es.js"></script>
+
         <script type="text/javascript">
             jQuery(function($){
                 $.datepicker.regional['es'] = {
@@ -51,13 +54,13 @@
         <div id="content">
             <div id="nav">
                 <ul>
-                    <li><a href="capacitacion.php" title="Regresar"><img src="img/baatras.png"></a></li>
-                    <li><a href="menu.php" title="Inicio"><img src="img/bahome.png"></a></li>
-                    <li><a href="contacto.php" title="Ayuda"><img src="img/baayuda.png"></a></li>
-                    <li><a href="close.php" title="Salir"><img src="img/baasalir.png"></a></li>                    
+                    <li><a href="capacitacion.php" title="Regresar"><img src="../img/baatras.png"></a></li>
+                    <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
+                    <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
+                    <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>                    
                 
                 <?php
-                    require 'usarBD.php';
+                    require 'conexion.php';
                     require_once 'claseEmpleado.php';                    
                 ?>
                 <br>
@@ -74,7 +77,7 @@
                 <?php              
                     $consultaFecha = "SELECT nom_curso, ini_curso, fin_curso FROM cursos WHERE ini_curso<=STR_TO_DATE('$datepicker','%Y-%m-%d') AND 
                         fin_curso>=STR_TO_DATE('$datepicker','%Y-%m-%d') ORDER BY nom_curso, ini_curso, fin_curso ASC;"; 
-                    $hacerFecha = mysql_query($consultaFecha, $conexion);    
+                    $hacerFecha = mysql_query($consultaFecha);    
                     $lista = new cursos();                                    
                     $lista->imprimirListaCurso($hacerFecha, $datepicker);
                 ?>
