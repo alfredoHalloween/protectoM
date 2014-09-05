@@ -306,9 +306,16 @@
         public $temporalNombre;
         public $temporalIni;
         public $temporalFin;
+        public $inscritosCurso;
+        public $total;
                 
         function imprimir() {
-            echo "<table cellpading='2' celspacing='2' border='2'";            
+            echo "<table cellpading='2' celspacing='2' border='2'
+                <tr>
+                    <th>NOMBRE CURSO</th>
+                    <th>INICIO DEL CURSO</th>
+                    <th>FIN DEL CURSO</th>
+                </tr>";            
         }
         function obtenerDatos($consultaRealizada) {            
             $totalInscritos=  mysql_num_rows($consultaRealizada);
@@ -319,15 +326,17 @@
                 
                 if(($this->temporalNombre != $this->nom_curso)
                 and ($this->temporalIni != $this->ini_curso)
-                and ($this->temporalFin != $this->fin_curso)) {
+                and ($this->temporalFin != $this->fin_curso)) {                    
+                    $this->inscritosCurso = 1;
                     echo "<tr>
                             <td>$this->nom_curso</td>
                             <td>$this->ini_curso</td>
-                            <td>$this->fin_curso</td>
-                        </td>";
+                            <td>$this->fin_curso</td>";
                     $this->temporalNombre=  $this->nom_curso;
                     $this->temporalIni=  $this->ini_curso;
                     $this->temporalFin=  $this->fin_curso;
+                } else {
+                    $this->inscritosCurso++;
                 }
             } 
         }

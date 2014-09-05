@@ -6,11 +6,14 @@
             } else {
                 $selector = date("Y");
             }
+            require 'conexion.php';
+            require 'claseEmpleado.php';
         ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>PERIODO/RESUMEN</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
         <link href="../css/estilos.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -35,9 +38,14 @@
                     </select>
                     <button type="submiet">Consultar</button>
                 </form>  
+                <br>
+                <br>
                 <?php
-                    $consultaAnnio = "SELECT * FROM cursos WHERE YEAR(ini_curso)=$selector;";
-                    
+                    $consultaAnnio = "SELECT * FROM cursos WHERE YEAR(ini_curso)=$selector ORDER BY nom_curso, ini_curso, fin_curso ASC;";
+                    $consultaRealizada=  mysql_query($consultaAnnio);
+                    $info = new periodoResumen();
+                    $info->imprimir();
+                    $info->obtenerDatos($consultaRealizada);
                 ?>
                 
             </div>
