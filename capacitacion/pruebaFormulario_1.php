@@ -38,14 +38,12 @@
                     || (empty($_POST ['instructor']) || !isset($_POST['instructor']))
                     || (empty($_POST ['formacion']) || !isset($_POST['formacion'])))
                     {
-                        echo '
-                            <br><br><table cellpadding="2" cellspacing="2" border="2">
-                            <tr><td>Datos Incompletos'; 
-       
-                        echo "<a href='PruebaFormulario.php?expediente=".$_POST['expediente']."&nombre=".$_POST['nombre']."&puesto=".$_POST['puesto']."
+                             
+                        echo " <table cellpadding='2' cellspacing='2' border='2'>
+                            <tr><td> <a href='PruebaFormulario.php?expediente=".$_POST['expediente']."&nombre=".$_POST['nombre']."&puesto=".$_POST['puesto']."
                             &adscripcion=".$_POST['adscripcion']."&coordinacion=".$_POST['coordinacion']."&ubicacion=".$_POST['ubicacion']."&plaza=".$_POST['plaza']."
                             &siden=".$_POST['siden']."&calidad=".@$_POST['calidad']."&area=".$_POST['area']."&horario=".$_POST['horario']."&descanso=".$_POST['descanso']."&estudios=".$_POST['estudios']."
-                            &concluido=".@$_POST['concluido']."&extension=".$_POST['extension']."&correo=".$_POST['correo']."&instructor=".@$_POST['instructor']."&formacion=".@$_POST['formacion']."'>  regresar</a></td></tr></table>";
+                            &concluido=".@$_POST['concluido']."&extension=".$_POST['extension']."&correo=".$_POST['correo']."&instructor=".@$_POST['instructor']."&formacion=".@$_POST['formacion']."'> Datos Incompletos <BR> regresar</a></td></tr></table>";
                    } else {                 
                         require 'conexion.php'; 
                         $expediente = strtoupper(mysql_real_escape_string($_POST['expediente']));
