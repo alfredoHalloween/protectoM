@@ -315,30 +315,28 @@
                     <th>NOMBRE CURSO</th>
                     <th>INICIO DEL CURSO</th>
                     <th>FIN DEL CURSO</th>
+                    <th>PERSONAL INSCRITO</th>
                 </tr>";            
         }
         function obtenerDatos($consultaRealizada) {            
-            $totalInscritos=  mysql_num_rows($consultaRealizada);
-            for($i = 0; $i < $totalInscritos; $i++) {
+            $this->totalInscritos=  mysql_num_rows($consultaRealizada);
+            for($i = 0; $i < $this->totalInscritos; $i++) {
                 $this->nom_curso=  mysql_result($consultaRealizada, $i, "nom_curso");
                 $this->ini_curso=  mysql_result($consultaRealizada, $i, "ini_curso");    
                 $this->fin_curso=  mysql_result($consultaRealizada, $i, "fin_curso");
-                
-                if(($this->temporalNombre != $this->nom_curso)
-                and ($this->temporalIni != $this->ini_curso)
-                and ($this->temporalFin != $this->fin_curso)) {                    
-                    $this->inscritosCurso = 1;
-                    echo "<tr>
-                            <td>$this->nom_curso</td>
-                            <td>$this->ini_curso</td>
-                            <td>$this->fin_curso</td>";
-                    $this->temporalNombre=  $this->nom_curso;
-                    $this->temporalIni=  $this->ini_curso;
-                    $this->temporalFin=  $this->fin_curso;
-                } else {
-                    $this->inscritosCurso++;
-                }
+                $this->inscritosCurso=  mysql_result($consultaRealizada, $i, "Filas");                
+                echo "<tr>
+                    <td>$this->nom_curso</td>
+                    <td>$this->ini_curso</td>
+                    <td>$this->fin_curso</td>
+                    <td>$this->inscritosCurso</td></tr>";
+                $this->total+=$this->inscritosCurso;
             } 
+            echo "<tr>
+                    <th colspan='3'>TOTAL:</th>
+                    <th>$this->total</th>
+                </tr>";
+            echo "</table>";
         }
     }
 ?>

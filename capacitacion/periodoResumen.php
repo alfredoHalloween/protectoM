@@ -41,11 +41,17 @@
                 <br>
                 <br>
                 <?php
-                    $consultaAnnio = "SELECT * FROM cursos WHERE YEAR(ini_curso)=$selector ORDER BY nom_curso, ini_curso, fin_curso ASC;";
+                    $consultaAnnio = "SELECT COUNT( * ) AS  Filas, nom_curso, ini_curso, fin_curso FROM cursos WHERE YEAR(ini_curso)=$selector GROUP BY nom_curso ORDER BY nom_curso;";
                     $consultaRealizada=  mysql_query($consultaAnnio);
-                    $info = new periodoResumen();
-                    $info->imprimir();
-                    $info->obtenerDatos($consultaRealizada);
+                    $prueba= mysql_num_rows($consultaRealizada);
+                    if($prueba != 0){
+                        $info = new periodoResumen();
+                        $info->imprimir();
+                        $info->obtenerDatos($consultaRealizada);
+                    } else {
+                        echo "<table cellpadding='2' cellspacing='2' border='2'>
+                            <td>REGISTROS NO DISPONIBLES</td></table>";
+                    }
                 ?>
                 
             </div>
