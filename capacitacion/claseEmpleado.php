@@ -23,18 +23,48 @@
         public $temp;
                 
         function asignar($hacerConsulta, $contador) {
-            $this->expediente = mysql_result($hacerConsulta, $contador, "expediente");
-            $this->nombre = mysql_result($hacerConsulta, $contador, "nombre");
+            $this->expediente = mysql_result($hacerConsulta, $contador, "expediente");            
+            $this->nombre = mysql_result($hacerConsulta, $contador, "nombre");            
             $this->puesto = mysql_result($hacerConsulta, $contador, "puesto");
+            if($this->puesto == NULL) {
+                $this->puesto = "N.A";
+            }
             $this->adscripcion = mysql_result($hacerConsulta, $contador, "adscripcion");
+            if($this->adscripcion == NULL) {
+                $this->adscripcion = "N.A";
+            }
             $this->ubicacion = mysql_result($hacerConsulta, $contador, "ubicacion");
+            if($this->ubicacion == NULL) {
+                $this->ubicacion = "N.A";
+            }            
             $this->coordinacion = mysql_result($hacerConsulta, $contador, "coordinacion");
+            if($this->coordinacion == NULL) {
+                $this->coordinacion = "N.A";
+            }            
             $this->plaza = mysql_result($hacerConsulta, $contador, "plaza");
+            if($this->plaza == "0000") {
+                $this->plaza = "N.A";
+            }                 
             $this->siden = mysql_result($hacerConsulta, $contador, "siden");
+            if($this->siden == NULL) {
+                $this->siden = "N.A";
+            }            
             $this->calidad = mysql_result($hacerConsulta, $contador, "calidad");
+            if($this->calidad == NULL) {
+                $this->calidad = "N.A";
+            }            
             $this->area = mysql_result($hacerConsulta, $contador, "area");
+            if($this->area == NULL) {
+                $this->area = "N.A";
+            }
             $this->horario = mysql_result($hacerConsulta, $contador, "horario");
+            if($this->horario == NULL) {
+                $this->horario = "N.A";
+            }            
             $this->descanso = mysql_result($hacerConsulta, $contador, "descanso");
+            if($this->descanso == NULL) {
+                $this->descanso = "N.A";
+            }            
             $this->grado = mysql_result($hacerConsulta, $contador, "grado");
             if($this->grado == NULL) {
                 $this->grado = "NO INDICADO";
