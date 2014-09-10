@@ -210,8 +210,8 @@
                         <th>Total: </th>
                         <th><?php echo $total; ?></th>
                     </tr>
-                </table>
+                 </table>
             </div>
         </div>
-    </body>
+       </body>
 </html>
