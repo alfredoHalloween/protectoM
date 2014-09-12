@@ -20,7 +20,7 @@
             <div id="menu">
                 <ul>
                     <li><a href='calendario.php'><img src="../img/calendario.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="../img/tomados.png" class="grande"></a></li>
+                    <li><a href='cursosTomados.php'><img src="../img/tomados.png" class="grande"></a></li>
                      
                 </ul>
             </div>
