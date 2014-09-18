@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head>       
         <?php 
             if(isset($_POST['datepicker'])) {
                 $datepicker = $_POST['datepicker'];
@@ -20,7 +20,7 @@
         <script type="text/javascript" src="../js/jquery-ui-1.10.3.custom.min.js"></script>
         <script type="text/javascript" src="../js/jquery.ui.datepicker-es.js"></script>
 
-        <script type="text/javascript">
+        <script type="text/javascript">                        
             jQuery(function($){
                 $.datepicker.regional['es'] = {
                     closeText: 'Cerrar',
