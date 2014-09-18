@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link href="css/menudespegable.css" rel="stylesheet" type="text/css">
+   
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>RESUMEN DE CURSOS IMPARTIDOS</title>
+    <title>ALTA </title>
     <link href="../css/movil.css" rel="stylesheet" type="text/css">
     <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
     

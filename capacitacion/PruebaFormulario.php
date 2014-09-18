@@ -97,8 +97,7 @@
             }
             
           ?>
-        
-</head>
+       </head>
 <body>
     <div id="content">
             <div id="nav">
@@ -151,7 +150,7 @@
         </select>
     </label>  
    <label>
-        <span>Coordinacion:</span><select name='coordinacion' >
+        <span>Coordinacion:</span><select name='coordinacion'>
         <option></option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
@@ -176,7 +175,7 @@
         </select>
     </label>  
    <label>
-        <span>Ubicación:</span><select name='ubicacion' >
+        <span>Ubicación:</span><select name='ubicacion'>
         <option></option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
@@ -267,7 +266,7 @@
         
      <label>
         
-        <input type="submit"  class="button" value="enviar datos" />
+        <input type=submit value="Enviar">
     </label>    
 </form>
      </div>
