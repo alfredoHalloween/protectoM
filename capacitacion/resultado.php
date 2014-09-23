@@ -3,7 +3,7 @@
         <title>EXPEDIENTE INDIVIDUAL</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
         <link href="../css/movil.css" rel="stylesheet" type="text/css">        
     </head>
     <body>        

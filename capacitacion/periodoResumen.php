@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>PERIODO/RESUMEN</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
         <link href="../css/estilos.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -41,7 +41,7 @@
                 <br>
                 <br>
                 <?php
-                    $consultaAnnio = "SELECT COUNT( * ) AS  Filas, nom_curso, ini_curso, fin_curso FROM cursos WHERE YEAR(ini_curso)=$selector GROUP BY nom_curso ORDER BY nom_curso;";
+                    $consultaAnnio = "SELECT COUNT( * ) AS  Filas, nom_curso, ini_curso, fin_curso FROM cursos WHERE YEAR(ini_curso)=$selector GROUP BY nom_curso ORDER BY ini_curso;";
                     $consultaRealizada=  mysql_query($consultaAnnio);
                     $prueba= mysql_num_rows($consultaRealizada);
                     if($prueba != 0){

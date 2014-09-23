@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CANTIDAD DE CURSOS IMPARTIDOS POR UBICACIÓN</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
         <?php
             $total = 0;
             $totalCapacitados = 0;
@@ -23,8 +23,8 @@
                 </ul>   
                 <br>
                 <br>
-                <table id="edo_instructoreses" cellpadding="2" cellspacing="2" border="2">
-                    <tr>
+                <table class="estiloTabla">
+                    <tr class="cabeceraTabla">
                         <th colspan="3">RESUMEN POR UBICACIÓN</th>
                     </tr>
                     <tr>                

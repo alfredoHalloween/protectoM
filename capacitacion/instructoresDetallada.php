@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>INSTRUCTORES DETALLADA</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
         <?php
             require 'conexion.php';
             require 'claseEmpleado.php'
@@ -25,8 +25,8 @@
                 $hacerConsulta=  mysql_query($consulta, $conexion);
                 $numInstructores=  mysql_num_rows($hacerConsulta);                                                
                 if($numInstructores != 0) {
-                    echo "<table cellpadding='2' cellspacing='2' border='2'>
-                            <tr>
+                    echo "<table class='estiloTabla'>
+                            <tr class='cabeceraTabla'>
                                 <th colspan='9'>TABLA GENERAL</th>
                                 <th colspan='2'>Total = $numInstructores</th>
                             </tr>"; 

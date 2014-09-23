@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>RESUMEN DE INSTRUCTORES POR COORDINACIÓN</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
         <?php
             $total = 0;
             require 'conexion.php';
@@ -21,8 +21,8 @@
                 </ul>  
                 <br>
                 <br>
-                <table id="instructores" cellpadding="2" cellspacing="2" border="2">
-                    <tr>
+                <table class="estiloTabla">
+                    <tr class="cabeceraTabla">
                         <th>TALLER</th>
                         <th>INSTRUCTORES</th>
                     </tr>            

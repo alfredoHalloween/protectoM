@@ -178,8 +178,8 @@
                 $this->cadenaCurso.="*$this->temporal<br>";
             }
 
-            echo "<table border=\"1\" cellpadding=\"2\" cellspacing=\"1\">
-                    <tr> 
+            echo "<table class='estiloTabla'>
+                    <tr class='cabeceraTabla'> 
                         <th colspan=\"2\">DATOS PERSONALES</th>
                     </tr>
                     <tr>
@@ -282,9 +282,9 @@
             if($fechaSeleccionada != NULL) {            
                 $this->totalCurso = mysql_num_rows($hacerCursos);
                 if($this->totalCurso != 0) {
-                    echo "<table cellpadding='2' cellspacing='2' border='2'>
-                        <tr>
-                            <th>NOMBRE CURSOS (AL $fechaSeleccionada)</th>
+                    echo "<table class='estiloTabla'>
+                        <tr class='cabeceraTabla'>
+                            <th>NOMBRE DE LOS CURSOS<br>(AL $fechaSeleccionada)</th>
                             <th>FECHA DE INICIO</th>
                             <th>FECHA DE TÉRMINO</th>
                         </tr>";
@@ -298,8 +298,8 @@
                         if($this->bandera != 0) {
                             echo "<tr>";
                             echo "<td>$this->nombreCurso</td>";
-                            echo "<td>$this->fechaDeInicio</td>";
-                            echo "<td>$this->fechaDeTermino</td>";
+                            echo "<td nowrap>$this->fechaDeInicio</td>";
+                            echo "<td nowrap>$this->fechaDeTermino</td>";
                             echo "</tr>";                    
                             $this->indice = $this->comprobacion;
                         }
@@ -340,8 +340,8 @@
         public $total;
                 
         function imprimir() {
-            echo "<table cellpading='2' celspacing='2' border='2'
-                <tr>
+            echo "<table class='estiloTabla'> 
+                <tr class='cabeceraTabla'>
                     <th>NOMBRE CURSO</th>
                     <th>INICIO DEL CURSO</th>
                     <th>FIN DEL CURSO</th>
@@ -357,8 +357,8 @@
                 $this->inscritosCurso=  mysql_result($consultaRealizada, $i, "Filas");                
                 echo "<tr>
                     <td>$this->nom_curso</td>
-                    <td>$this->ini_curso</td>
-                    <td>$this->fin_curso</td>
+                    <td nowrap>$this->ini_curso</td>
+                    <td nowrap>$this->fin_curso</td>
                     <td>$this->inscritosCurso</td></tr>";
                 $this->total+=$this->inscritosCurso;
             } 

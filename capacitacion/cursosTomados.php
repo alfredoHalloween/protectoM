@@ -1,13 +1,12 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <link href="../css/menudespegable.css" rel="stylesheet" type="text/css">
+    <head>        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>CURSOS TOMADOS</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">   
         <link href="../css/estilos.css" rel="stylesheet" type="text/css">    
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">    
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">    
     </head>
     <body>
         <div id="content">
@@ -46,15 +45,15 @@
                     <button type="submit">Aceptar</button>
                 </form>
                 <?php
-                    $crearTabla = "SELECT general.nombre, general.coordinacion, cursos.nom_curso, cursos.ini_curso, cursos.fin_curso FROM cursos, general WHERE general.expediente = cursos.expediente AND cursos.nom_curso ='$lista';";
+                    $crearTabla = "SELECT general.nombre, general.coordinacion, cursos.nom_curso, cursos.ini_curso, cursos.fin_curso FROM cursos, general WHERE general.expediente = cursos.expediente AND cursos.nom_curso ='$lista' ORDER BY cursos.ini_curso, cursos.fin_curso, general.nombre;";
                     $hacerCrear = mysql_query($crearTabla);
                     $numInscritos = mysql_num_rows($hacerCrear);                    
                 ?>       
                 <br>
                 <br>
-                <table cellpadding="2" cellpadding="2" border="2">
-                    <tr>
-                        <th colspan="3"> <?php echo $lista; ?></th>
+                <table class="estiloTabla">
+                    <tr class="cabeceraTabla">
+                        <th colspan="3"><?php echo $lista; ?></th>
                         <th>TOTAL: <?php echo $numInscritos;?></th>
                     </tr>
                     <tr>
@@ -72,8 +71,8 @@
                             echo "<tr>
                                     <td>$nombre</td>
                                     <td>$coordinacion</td>
-                                    <td>$fechaInicio</td>
-                                    <td>$fechaFin</td>
+                                    <td nowrap>$fechaInicio</td>
+                                    <td nowrap>$fechaFin</td>
                                 </tr>";
                         }
                     ?>
