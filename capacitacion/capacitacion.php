@@ -22,7 +22,7 @@
                     <li><a href='capa1.php'><img src="../img/cinstruc.png" class="grande"></a></li>
                     <li><a href='Cursos2.php'><img src="../img/ccursos.png" class="grande"></a></li>
                     <li><a href='.php'><img src="../img/coficios.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="../img/cmanuales.png" class="grande"></a></li>
+                    <li><a href='manuales.php'><img src="../img/cmanuales.png" class="grande"></a></li>
                     <li><a href='personal1.php'><img src="../img/cpersonal.png" class="grande"></a></li>
                     <li><a href='periodoResumen.php'><img src="../img/CRP.png" class="grande" ></a></li>
                     <li><a href='alta.php'><img src="../img/calta.png" class="grande" ></a></li>
