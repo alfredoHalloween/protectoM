@@ -13,7 +13,7 @@
         <title>CURSOS DISPONIBLES AL DIA <?php echo $datepicker;?></title>
         <link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.7.2.custom.css" />
         <link href="../css/movil.css" rel="stylesheet" type="text/css">  
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">  
+        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">  
         <link href="../css/estilos.css" rel="stylesheet" type="text/css">  
         <script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="../js/jquery-1.9.1d.js"></script>
@@ -58,7 +58,7 @@
                     <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>                    
-                
+                </ul>
                 <?php
                     require 'conexion.php';
                     require_once 'claseEmpleado.php';                    
@@ -80,8 +80,7 @@
                     $hacerFecha = mysql_query($consultaFecha);    
                     $lista = new cursos();                                    
                     $lista->imprimirListaCurso($hacerFecha, $datepicker);
-                ?>
-                </ul> 
+                ?>                
             </div>
         </div>
     </body>
