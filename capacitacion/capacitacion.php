@@ -19,13 +19,13 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href='capa1.php'><img src="../img/cinstruc.png" class="grande"></a></li>
-                    <li><a href='Cursos2.php'><img src="../img/ccursos.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="../img/coficios.png" class="grande"></a></li>
-                    <li><a href='manuales.php'><img src="../img/cmanuales.png" class="grande"></a></li>
-                    <li><a href='personal1.php'><img src="../img/cpersonal.png" class="grande"></a></li>
-                    <li><a href='periodoResumen.php'><img src="../img/CRP.png" class="grande" ></a></li>
-                    <li><a href='alta.php'><img src="../img/calta.png" class="grande" ></a></li>
+                    <li><a href='capa1.php'><img src="../img/cinstruc_1.png" class="grande"></a></li>
+                    <li><a href='Cursos2.php'><img src="../img/ccursos_1.png" class="grande"></a></li>
+                    <li><a href='.php'><img src="../img/coficios_2.png" class="grande"></a></li>
+                    <li><a href='manuales.php'><img src="../img/cmanuales_1.png" class="grande"></a></li>
+                    <li><a href='personal1.php'><img src="../img/cpersonal_1.png" class="grande"></a></li>
+                    <li><a href='periodoResumen.php'><img src="../img/CRP_1.png" class="grande" ></a></li>
+                    <li><a href='alta.php'><img src="../img/calta_1.png" class="grande" ></a></li>
                    
                 </ul>
             </div>
