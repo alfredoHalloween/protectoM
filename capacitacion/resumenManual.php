@@ -16,11 +16,7 @@
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>
-            </div>            
-            
-            hola
-            
-            
+            </div>                                                
         </div>
      </body>
 </html>
