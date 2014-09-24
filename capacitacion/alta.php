@@ -20,10 +20,10 @@
             <div id="menu">
                 <ul>
                     <li><a href='.php'><img src="../img/cinstruc.png" class="grande"></a></li>
-                    <li><a href='altaCursos.php'><img src="../img/ccursos.png" class="grande"></a></li>
+                    <li><a href='altaCursos.php'><img src="../img/ccursos_1.png" class="grande"></a></li>
                     <li><a href='.php'><img src="../img/coficios.png" class="grande"></a></li>
-                    <li><a href='.php'><img src="../img/cmanuales.png" class="grande"></a></li>
-                    <li><a href='PruebaFormulario.php'><img src="../img/cpersonal.png" class="grande"></a></li>
+                    <li><a href='.php'><img src="../img/cmanuales_1.png" class="grande"></a></li>
+                    <li><a href='PruebaFormulario.php'><img src="../img/cpersonal_1.png" class="grande"></a></li>
 
                    
                 </ul>
