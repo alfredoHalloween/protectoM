@@ -125,31 +125,7 @@
                 echo "<td>$this->cadena</td>";
             }
             echo "<tr>";
-        }
-        
-        function imprimirCabecera() {
-            echo "<tr>
-                <th>Expediente</th>
-                <th>Nombre</th>
-                <th>Puesto</th>
-                <th>Adscripción</th>
-                <th>Ubicación</th>
-                <th>Coordinación</th>
-                <th>Plaza</th>
-                <th>Siden</th>
-                <th>Calidad</th>
-                <th>Área</th>
-                <th>Horario</th>
-                <th>Descanso</th>
-                <th>Último grado de estudios</th>
-                <th>¿Estudios concluidos?</th>
-                <th>Extensión</th>
-                <th>E-MAIL</th>
-                <th>¿Es instructor?</th>
-                <th>¿Tomó curso de formación?</th>";                
-                echo "<th>Cursos que imparte</th>";            
-            echo "</tr>";
-    }
+        }                   
     }        
     
     class empleadoPersonal extends empleado {

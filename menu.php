@@ -7,7 +7,7 @@
         <link href="css/movil.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div id="content">
+        <div id="content"> 
             <div id="nav">
                 <ul>
                     <li><a href="menu.php" title="Regresar"><img src="img/baatras.png"></a></li>

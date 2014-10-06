@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>INSTRUCTORES DETALLADA</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
+        <link href="../css/tablaAdaptable.css" rel="stylesheet" type="text/css">
         <?php
             require 'conexion.php';
             require 'claseEmpleado.php'
@@ -22,21 +22,42 @@
             </div>
              <?php
                 $consulta="SELECT * FROM general WHERE instructor=TRUE;";
-                $hacerConsulta=  mysql_query($consulta, $conexion);
-                $numInstructores=  mysql_num_rows($hacerConsulta);                                                
+                $hacerConsulta=  mysql_query($consulta);
+                $numInstructores=  mysql_num_rows($hacerConsulta);     
+                echo "<div class='titulo'>TABLA DETALLADA DE INSTRUCTORES DEL SISTEMA DE TRANSPORTE COLECTIVO<br>Total: $numInstructores</div>
+                        <br>
+                        <br>";
                 if($numInstructores != 0) {
-                    echo "<table class='estiloTabla'>
-                            <tr class='cabeceraTabla'>
-                                <th colspan='9'>TABLA GENERAL</th>
-                                <th colspan='2'>Total = $numInstructores</th>
-                            </tr>"; 
+                    echo "<table class='tabla'>";
+                    echo "<thead>
+                                <th>Expediente</th>
+                                <th>Nombre</th>
+                                <th>Puesto</th>
+                                <th>Adscripción</th>
+                                <th>Ubicación</th>
+                                <th>Coordinación</th>
+                                <th>Plaza</th>
+                                <th>Siden</th>
+                                <th>Calidad</th>
+                                <th>Area</th>
+                                <th>Horario</th>
+                                <th>Descanso</th>
+                                <th>Estudios</th>
+                                <th>¿Concluidos?</th>
+                                <th>Extensión</th>
+                                <th>Correo</th>
+                                <th>¿Instructor?</th>
+                                <th>¿Curso de formación?</th>
+                                <th>Cursos que imparte</th>
+                              </thead>";                             
                     
-                    $tablaDetallada= new empleado();                                                    
-                    $tablaDetallada->imprimirCabecera();
+                    $tablaDetallada= new empleado();                              
+                    echo "<tbody>";
                     for($i = 0; $i < $numInstructores; $i++) {                        
                         $tablaDetallada->asignar($hacerConsulta, $i);
                         $tablaDetallada->imprimirEmpleado();
                     }
+                    echo "</tbody>";
                     echo "</table>";
                 } else {
                     echo "<table cellpading='2' cellspacing='2' border='2'>
