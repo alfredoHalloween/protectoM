@@ -47,41 +47,49 @@
                    } else {                 
                         require 'conexion.php'; 
                         $expediente = strtoupper(mysql_real_escape_string($_POST['expediente']));
-                        $nombre = strtoupper(mysql_real_escape_string($_POST['nombre']));
-                        $puesto = strtoupper(mysql_real_escape_string($_POST['puesto']));
-                        $adscripcion = mysql_real_escape_string($_POST['adscripcion']);
-                        $coordinacion = mysql_real_escape_string($_POST['coordinacion']);
-                        $ubicacion = mysql_real_escape_string($_POST['ubicacion']);
-                        $plaza = mysql_real_escape_string($_POST['plaza']);
-                        $siden = mysql_real_escape_string($_POST['siden']);
-                        $calidad = mysql_real_escape_string(@$_POST['calidad']);
-                        $area = strtoupper(mysql_real_escape_string($_POST['area']));
-                        $horario = strtoupper(mysql_real_escape_string($_POST['horario']));
-                        $descanso = strtoupper(mysql_real_escape_string($_POST['descanso']));
-                        $estudios = mysql_real_escape_string($_POST['estudios']);
-                        $concluido = mysql_real_escape_string(@$_POST['concluido']);
-                        $extension = mysql_real_escape_string($_POST['extension']);
-                        $correo = mysql_real_escape_string($_POST['correo']);
-                        $instructor = mysql_real_escape_string(@$_POST['instructor']);
-                        $formacion = mysql_real_escape_string(@$_POST['formacion']);
+                        $existencia = "SELECT * FROM general WHERE expediente=$expediente;";
+                        $consultaExistencia = mysql_query($existencia);
+                        $siExiste = mysql_num_rows($consultaExistencia);
+                        if($siExiste == 0) {                                                                           
+                            $nombre = strtoupper(mysql_real_escape_string($_POST['nombre']));
+                            $puesto = strtoupper(mysql_real_escape_string($_POST['puesto']));
+                            $adscripcion = mysql_real_escape_string($_POST['adscripcion']);
+                            $coordinacion = mysql_real_escape_string($_POST['coordinacion']);
+                            $ubicacion = mysql_real_escape_string($_POST['ubicacion']);
+                            $plaza = mysql_real_escape_string($_POST['plaza']);
+                            $siden = mysql_real_escape_string($_POST['siden']);
+                            $calidad = mysql_real_escape_string(@$_POST['calidad']);
+                            $area = strtoupper(mysql_real_escape_string($_POST['area']));
+                            $horario = strtoupper(mysql_real_escape_string($_POST['horario']));
+                            $descanso = strtoupper(mysql_real_escape_string($_POST['descanso']));
+                            $estudios = mysql_real_escape_string($_POST['estudios']);
+                            $concluido = mysql_real_escape_string(@$_POST['concluido']);
+                            $extension = mysql_real_escape_string($_POST['extension']);
+                            $correo = mysql_real_escape_string($_POST['correo']);
+                            $instructor = mysql_real_escape_string(@$_POST['instructor']);
+                            $formacion = mysql_real_escape_string(@$_POST['formacion']);
 
-                        $consulta1= "SELECT * FROM general  WHERE expediente= '$expediente' AND nombre = '$nombre' AND puesto = '$puesto' AND  
-                                          adscripcion = '$adscripcion'  AND ubicacion= '$ubicacion' AND 
-                                          coordinacion = '$coordinacion' AND plaza = '$plaza' AND siden = '$siden' AND
-                                          calidad = '$calidad' AND area = '$area' AND horario = '$horario' AND descanso = '$descanso' AND
-                                          grado = '$estudios' AND concluido = $concluido AND extension = '$extension' AND
-                                          correo = '$correo' AND instructor = $instructor AND formacion = $formacion";
-                        $registro1 =  mysql_query($consulta1) or die (mysql_error());               
-                        if(mysql_num_rows($registro1)== 0){                            
-                            $consulta = "INSERT INTO general (expediente,nombre,puesto,adscripcion,ubicacion,coordinacion,plaza,siden,calidad,area,horario,descanso,
-                                    grado,concluido,extension,correo,instructor,formacion) 
-                                    VALUES ('$expediente','$nombre','$puesto','$adscripcion','$ubicacion','$coordinacion','$plaza',
-                                    '$siden','$calidad','$area','$horario','$descanso','$estudios',$concluido,'$extension',
-                                    '$correo',$instructor,$formacion);";
-                            $realizarconsulta= mysql_query($consulta,$conexion) or die (mysql_error());
-                         echo "<table cellpading='2' cellspacing='2' border='2'>
-                             <tr><td>ALTA DE PERSONAL EXITOSA</td></tr></table>";                                                 
-                        }            
+                            $consulta1= "SELECT * FROM general  WHERE expediente= '$expediente' AND nombre = '$nombre' AND puesto = '$puesto' AND  
+                                              adscripcion = '$adscripcion'  AND ubicacion= '$ubicacion' AND 
+                                              coordinacion = '$coordinacion' AND plaza = '$plaza' AND siden = '$siden' AND
+                                              calidad = '$calidad' AND area = '$area' AND horario = '$horario' AND descanso = '$descanso' AND
+                                              grado = '$estudios' AND concluido = $concluido AND extension = '$extension' AND
+                                              correo = '$correo' AND instructor = $instructor AND formacion = $formacion";
+                            $registro1 =  mysql_query($consulta1) or die (mysql_error());               
+                            if(mysql_num_rows($registro1)== 0){                            
+                                $consulta = "INSERT INTO general (expediente,nombre,puesto,adscripcion,ubicacion,coordinacion,plaza,siden,calidad,area,horario,descanso,
+                                        grado,concluido,extension,correo,instructor,formacion) 
+                                        VALUES ('$expediente','$nombre','$puesto','$adscripcion','$ubicacion','$coordinacion','$plaza',
+                                        '$siden','$calidad','$area','$horario','$descanso','$estudios',$concluido,'$extension',
+                                        '$correo',$instructor,$formacion);";
+                                $realizarconsulta= mysql_query($consulta,$conexion) or die (mysql_error());
+                             echo "<table cellpading='2' cellspacing='2' border='2'>
+                                 <tr><td>ALTA DE PERSONAL EXITOSA</td></tr></table>";                                                 
+                   
+                             }
+                        } else {
+                            
+                        }
                    }
                 ?>
             </div>

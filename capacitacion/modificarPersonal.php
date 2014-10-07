@@ -126,7 +126,6 @@
      <label>
         <span>Adscripción:</span><select name='adscripcion'>
         <option></option>
-                <option value='DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE'>DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA</option>
@@ -176,7 +175,7 @@
     </label>  
    <label>
         <span>Ubicación:</span><select name='ubicacion'>
-        <option></option>                
+        <option></option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA</option>
