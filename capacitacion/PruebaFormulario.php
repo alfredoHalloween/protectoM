@@ -137,8 +137,7 @@
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA</option>
                 <option value='COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN'>COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN</option>
-                <option value='COORDINACIÓN DE REHABILITACIÓN DE TRENES'>COORDINACIÓN DE REHABILITACIÓN DE TRENES</option>
-                
+                <option value='COORDINACIÓN DE REHABILITACIÓN DE TRENES'>COORDINACIÓN DE REHABILITACIÓN DE TRENES</option>                
                 <option value='COORDINACIÓN DE ELECTRÓNICA'>COORDINACIÓN DE ELECTRÓNICA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO TLÁHUAC'>COORDINACIÓN DE MANTENIMIENTO TLÁHUAC</option>
                 <option value='GERENCIA DE INGENIERÍA'>GERENCIA DE INGENIERÍA</option>
@@ -151,7 +150,7 @@
     </label>  
    <label>
         <span>Coordinacion:</span><select name='coordinacion'>
-        <option></option>
+                <option></option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA</option>
@@ -162,8 +161,7 @@
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA</option>
                 <option value='COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN'>COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN</option>
-                <option value='COORDINACIÓN DE REHABILITACIÓN DE TRENES'>COORDINACIÓN DE REHABILITACIÓN DE TRENES</option>
-                
+                <option value='COORDINACIÓN DE REHABILITACIÓN DE TRENES'>COORDINACIÓN DE REHABILITACIÓN DE TRENES</option>                
                 <option value='COORDINACIÓN DE ELECTRÓNICA'>COORDINACIÓN DE ELECTRÓNICA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO TLÁHUAC'>COORDINACIÓN DE MANTENIMIENTO TLÁHUAC</option>
                 <option value='GERENCIA DE INGENIERÍA'>GERENCIA DE INGENIERÍA</option>
@@ -180,7 +178,7 @@
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CD. AZTECA</option>
-                <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTTUCIÓN 1917'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTTUCIÓN 1917</option>
+                <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTTUCIÓN 1917'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTITUCIÓN 1917</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO LA PAZ'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO LA PAZ</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ROSARIO'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ROSARIO</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TASQUEÑA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TASQUEÑA</option>
@@ -229,9 +227,9 @@
         <span>Ultimo grado de estudios:</span><select name='estudios' >
             <option></option>
                        <option value='PRIMARIA'>Primaria</option>
-                       <option value='SECUANDARIA'>Secundaria</option>
+                       <option value='SECUNDARIA'>Secundaria</option>
                        <option value='ESPECIALIDADES'>Especialidades(Carrera Tecnica)</option>
-                       <option value='MEDIA'>Media Superior</option>
+                       <option value='MEDIA SUPERIOR'>Media Superior</option>
                        <option value='SUPERIOR'>Superior</option>
                        <option value='POSGRADO'>Posgrado</option>
                        <option value='MAESTRIA'>Maestria</option>

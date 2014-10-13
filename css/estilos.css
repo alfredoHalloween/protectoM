@@ -56,6 +56,14 @@ form {
     background: orange;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
+
+.estiloRadio {
+    border: 4px solid #F90;
+    position: relative;
+    background: #FFFFFF;
+    color: #000;
+}
+
 button.submit {
     padding: 9px 17px;
    font-family: Helvetica, Arial, sans-serif;
