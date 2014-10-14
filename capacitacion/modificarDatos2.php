@@ -28,12 +28,12 @@
                             case 1:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=1&expediente=$limpiaExp'>                                
                                     Nombre: <input id='nombre' name='nombre' type='text' placeholder='Introduzca el nuevo nombre'>
-                                    <button type='submit'>Modificar</button>";                            
+                                    <br>";                            
                                 break;
                             case 2:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=2&expediente=$limpiaExp'>                                
                                     Puesto: <input id='puesto' name='puesto' type='text' placeholder='Introduzca el puesto'>
-                                    <button type='submit'>Modificar</button>";
+                                    <br>";
                                 break;
                             case 3:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=3&expediente=$limpiaExp'>                                
@@ -58,8 +58,7 @@
                                             <option value='SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN'>SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN</option>
                                             <option value='SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I'>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I</option>
                                             <option value='SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II'>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II</option>
-                                    </select>
-                                    <button type='submit'>Modificar</button>";
+                                    </select>";
                                 break;      
                             case 4:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=4&expediente=$limpiaExp'>                                
@@ -83,8 +82,7 @@
                                         <option value='SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN'>SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN</option>
                                         <option value='SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I'>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO I</option>
                                         <option value='SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II'>SUBGERENCIA DE MANTENIMIENTO SISTEMÁTICO II</option>
-                                    </select>
-                                    <button type='submit'>Modificar</button>";
+                                    </select>";
                                 break;
                             case 5:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=5&expediente=$limpiaExp'>                                
@@ -110,18 +108,17 @@
                                         <option value='ADMINISTRACIÓN DE MATERIALES'>ADMINISTRACIÓN DE MATERIALES</option>
                                         <option value='COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN (JEFATURA TICOMÁN)'>COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN (JEFATURA TICOMÁN)</option>
                                         <option value='COMISIÓN SINDICAL'>COMISIÓN SINDICAL</option>
-                                    </select>    
-                                    <button type='submit'>Modificar</button>";
+                                    </select>";
                                 break;
                             case 6:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=6&expediente=$limpiaExp'>
                                         Plaza: <input type='text' name='plaza' id='plaza' placeholder='Teclee la nueva plaza'>
-                                    <button type='submit'>Modificar</button>";
+                                        <br>";
                                 break;
                             case 7:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=7&expediente=$limpiaExp'>
                                         SIDEN: <input type='text' name='siden' id='siden' placeholder='Modificar SIDEN'>
-                                    <button type='submit'>Modificar</button>";
+                                        <br>";
                                 break;
                             case 8:
                                 echo "<form class='estiloRadio' id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=8&expediente=$limpiaExp'>
@@ -137,26 +134,22 @@
                                         <br>
                                         <input type='radio' name='calidad' id='calidad' value='HONORARIOS'> HONORARIOS
                                         <br>
-                                        <br>
-                                    <button type='submit'>Modificar</button>";                                
+                                        <br>";                                
                                 break;
                             case 9:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=9&expediente=$limpiaExp'>
                                     Área: <input type='text' name='area' id='area' placeholder='Teclee la nueva área'>
-                                    <br>
-                                    <button type='submit'>Modificar</button>";                                    
+                                    <br>";                                    
                                 break;
                             case 10:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=10&expediente=$limpiaExp'>
                                     Horario: <input type='text' name='horario' id='horario' placeholder='Ej. 07:00 A 15:00'>
-                                    <br>
-                                    <button type='submit'>Modificar</button>";                                    
+                                    <br>";                                    
                                 break;
                             case 11:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=11&expediente=$limpiaExp'>
                                     Descanso: <input type='text' name='descanso' id='descanso' placeholder='Ej. L Y M'>
-                                    <br>
-                                    <button type='submit'>Modificar</button>";                                    
+                                    <br>";                                    
                                 break;   
                             case 12:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=12&expediente=$limpiaExp'>
@@ -170,8 +163,7 @@
                                             <option value='POSGRADO'>Posgrado</option>
                                             <option value='MAESTRIA'>Maestria</option>
                                             <option value='DOCTORADO'>Doctorado</option>            
-                                        </select>
-                                    <button type='submit'>Modificar</button>";
+                                        </select>";
                                 break;
                             case 13:
                                 echo "<form class='estiloRadio' id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=13&expediente=$limpiaExp'>
@@ -183,20 +175,17 @@
                                         <br>
                                         <input type='radio' name='concluido' id='concluido' value='FALSE'> NO                                        
                                         <br>
-                                        <br>
-                                    <button type='submit'>Modificar</button>";                                
+                                        <br>";                                
                                 break;
                             case 14:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=14&expediente=$limpiaExp'>
                                     Extensión: <input type='text' name='extension' id='extension' placeholder='Ej. 4532 ó 4565-4325'>
-                                    <br>
-                                    <button type='submit'>Modificar</button>";                                    
+                                    <br>";                                    
                                 break;
                             case 15:
                                 echo "<form id='modificacion' name='modificacion' method='post' action='modificacionRealizar.php?op=15&expediente=$limpiaExp'>
-                                    Extensión: <input type='text' name='correo' id='correo' placeholder='Ej. micorreo@correo.com'>
-                                    <br>
-                                    <button type='submit'>Modificar</button>";                                    
+                                    Correo: <input type='text' name='correo' id='correo' placeholder='Ej. micorreo@correo.com'>
+                                    <br>";                                    
                                 break;
                             default:
                           
@@ -206,6 +195,7 @@
                         echo "ERROR EN LA PÁGINA";
                     }            
                 ?>                       
+                <button type='submit'>Modificar</button>
             </form>
         </div>
     </body>
