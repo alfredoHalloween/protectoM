@@ -17,7 +17,10 @@
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>            
            </div>                     
-            <form id='busqueda' name='busqueda' action='resultado.php' method='post'>
+            <?php
+                require 'conexion.php';
+            ?>
+            <form id='busqueda' name='busqueda' action='resultado.php' method='get'>
                 <ul>
                     Expediente: <input type='text' id='consulta' name='consulta' placeholder='Teclee el expediente'>
                     <li>

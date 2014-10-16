@@ -1,6 +1,6 @@
 .titulo{
     margin: 0 auto;
-    width: 100%;    
+    width: 90%;    
     color: #fff;
     font-size: 20px;
     text-align: center;
@@ -11,10 +11,11 @@
     background: -o-linear-gradient(#DF7401, #FAAC58);
 }
 
-.tabla{    
+.tabla{
+    margin: 0 auto;
     background: #fff;    
     color: #000;
-    width: 100%;
+    width: 90%;
     font-size: 12px;
     text-align: center;
     font-family: Arial;    
@@ -39,7 +40,7 @@ td, th, .tabla{
 }
 @media screen and (max-width : 999px){
     .titulo{
-        width: 100%;
+        width: 90%;
     }
     table, thead, tr, th, tbody, td{        
         display: block;

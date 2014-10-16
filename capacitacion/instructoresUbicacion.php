@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>INSTRUCTORES POR UBICACIÓN</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css"> 
+        <link href="../css/tablaAdaptable.css" rel="stylesheet" type="text/css"> 
     </head>
     <body>
         <div id="content">
@@ -55,16 +55,32 @@
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);
         
                 if($numeroDeRegistros != 0) {
-                    echo "<table cellpading='2' cellspacing='2' border='2'>
-                            <td>$ubicacion</td>
-                        </table><br><br>";
-                    echo "<table cellpadding='2' cellspacing='2' border='2'>
-                            <tr>
-                                <th colspan='9'>TABLA DETALLADA</th>
-                                <th colspan='2'>Total = $numeroDeRegistros</th>
-                            </tr>";                                    
-                    $empleadoActual = new empleado();
-                    $empleadoActual->imprimirCabecera();
+                    echo "<div class='titulo'>$ubicacion<br>Total: $numeroDeRegistros</div>
+                            <br>
+                            <br>";
+                    echo "<table class='tabla'>";
+                    echo "<thead>
+                            <th>Expediente</th>
+                            <th>Nombre</th>
+                            <th>Puesto</th>
+                            <th>Adscripción</th>
+                            <th>Ubicación</th>
+                            <th>Coordinación</th>
+                            <th>Plaza</th>
+                            <th>Siden</th>
+                            <th>Calidad</th>
+                            <th>Area</th>
+                            <th>Horario</th>
+                            <th>Descanso</th>
+                            <th>Estudios</th>
+                            <th>¿Concluidos?</th>
+                            <th>Extensión</th>
+                            <th>Correo</th>
+                            <th>¿Instructor?</th>
+                            <th>¿Curso de formación?</th>
+                            <th>Cursos que imparte</th>
+                        </thead>";                                                        
+                    $empleadoActual = new empleado();                    
                     for ($i = 0; $i < $numeroDeRegistros; $i++) {
                         $empleadoActual->asignar($hacerConsulta, $i);
                         $empleadoActual->imprimirEmpleado();

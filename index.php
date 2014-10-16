@@ -1,3 +1,3 @@
 <?php
-    include_once 'menu.php';
+    header("location:menu.php");
 ?>

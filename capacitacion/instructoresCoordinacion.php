@@ -15,8 +15,7 @@
                     <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="ayuda.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
-                </ul>
-            </div>                
+                </ul>                            
             <?php                                      
                 if (isset($_GET['coordinacion'])) {
                     $coordinacion = $_GET['coordinacion'];
@@ -33,7 +32,8 @@
                 $numeroDeRegistros = mysql_num_rows($hacerConsulta);
         
                 if($numeroDeRegistros != 0) {
-                    echo "<div class='titulo'>$coordinacion<br>Total: $numeroDeRegistros</div>
+                    echo "</div>
+                        <div class='titulo'>$coordinacion<br>Total: $numeroDeRegistros</div>
                         <br>
                         <br>";                        
                     echo "<table class='tabla'>";
@@ -67,11 +67,11 @@
                     echo "</tbody>";
                     echo "</table>";
                 } else {                    
-                    echo "<table cellpading='2' cellspacing='2' border='2'>
-                            <td>NO HAY REGISTROS DISPONIBLES</td>
-                        </table>";
+                    echo "<br><br>
+                        <div class='titulo'>NO HAY REGISTROS DISPONIBLES</div>                        
+                        </div>";
                 }
-            ?>            
+            ?>                   
         </div>
     </body>
 </html>
