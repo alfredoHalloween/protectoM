@@ -30,11 +30,7 @@
                     require 'conexion.php';
                     require 'claseEmpleado.php';
                     if(!isset($_GET['consulta']) || empty($_GET['consulta'])) {
-                        echo "<table>
-                            <tr>
-                                <td>NO SE HA INTRODUCIDO NINGÚN EXPEDIENTE <a href=busquedaq.php>REGRESAR</a></td>
-                            </tr>
-                            </table>";
+                        echo "<div class='titulo'>NO SE HA INTRODUCIDO NINGÚN EXPEDIENTE</div>";
                     } else {     
                         $sujeto = mysql_real_escape_string($_GET['consulta']);
                         $consulta = "SELECT * FROM general WHERE expediente=\"$sujeto\"; ";                                                                            
@@ -47,11 +43,7 @@
                             $personal->asignar($hacerconsulta);
                             $personal->imprimir($hacerCursos);
                         } else {
-                            echo "<table>
-                                <tr>
-                                    <td>EL EXPEDIENTE TECLEADO NO EXISTE <a href=busquedaq.php>REGRESAR</a></td>
-                                </tr>
-                                </table>";
+                            echo "<div class='titulo'>REGISTRO NO EXISTENTE</div>";
                         }
                     }
                 ?>

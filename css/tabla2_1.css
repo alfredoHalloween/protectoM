@@ -1,9 +1,22 @@
+.titulo{
+    margin: 0 auto;
+    width: 90%;    
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;   
+    border: 5px dotted #E65C00;
+    background: -webkit-linear-gradient(#DF7401, #FAAC58);
+    background: -moz-linear-gradient(#DF7401, #FAAC58);
+    background: -o-linear-gradient(#DF7401, #FAAC58);
+}
 table.estiloTabla {
+    margin: 0 auto;
     font-family: "Arial", sans-serif;
     border-collapse: separate;
     border-spacing: 0.2em;
     background-color: #ececff;
-    width: 100%;
+    width: 50%;
     color: #000000;
     font-size: 12px;
     box-shadow: 1px 1px 2px #BBBBBB;
@@ -67,4 +80,13 @@ table tbody tr th a {
 table  tbody tr th a:hover {
     color: #F16266 !important;
     font-weight: normal;
+}
+
+@media screen and (max-width: 999px) {
+    form {
+        color: #ffffff;
+    }
+    table.estiloTabla {
+        width: 100%;
+    }
 }

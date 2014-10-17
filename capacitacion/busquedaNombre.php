@@ -19,6 +19,8 @@
                 </ul>    
             </div>
             <form name="nombre" id="nombre" method="get" action="busquedaNombre.php">
+                <p align="justify">Introduzca el nombre que desea buscar, empezando por apellido. Si no recuerda el nombre completo, el sistema
+                mostrará una lista con posibles coincidencias.</p>
                 Nombre: <input type="text" name="busNombre" id="busNombre" placeholder="Introducir nombre">
                 <button type="submit">Buscar</button>
             </form>            
@@ -26,14 +28,14 @@
                 if(isset($_GET['busNombre']) and !empty($_GET['busNombre'])) {
                     include 'conexion.php';
                     $chequeo = mysql_real_escape_string(strtr(strtoupper($_GET['busNombre']), "áéíóú", "ÁÉÍÓÚ"));                
-                    $consultaNombre = "SELECT expediente, nombre FROM general WHERE nombre LIKE '%$chequeo%'";
+                    $consultaNombre = "SELECT expediente, nombre FROM general WHERE nombre LIKE '%$chequeo%' ORDER BY nombre";
                     $hacerConsultaNombre = mysql_query($consultaNombre);
                     $resultados = mysql_num_rows($hacerConsultaNombre);
                     $archivoActual = basename($_SERVER['PHP_SELF']);
                     if($resultados != 0) {
                         echo "<br>
                               <br>
-                              <table class='estiloTabla' style='width: 65%; margin: 0 auto;'>
+                              <table class='estiloTabla'>
                                 <tr class='cabeceraTabla'>
                                     <th colspan='4'>RESULTADOS: $resultados</th>
                                 </tr>
@@ -57,7 +59,9 @@
                         }
                         echo "</table>";                                                
                     } else {
-                        echo "NO SE HAN ENCONTRADO RESULTADOS";
+                        echo "<br>
+                            <br>
+                            <div class='titulo'>NO SE HAN ENCONTRADO RESULTADOS</div>";
                     }                        
                 }                
             ?>
