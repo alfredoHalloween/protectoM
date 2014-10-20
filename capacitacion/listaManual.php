@@ -13,7 +13,7 @@
             $status=$_GET['status'];
         }
         require 'conexion.php';
-        $consulta = "SELECT * FROM cientocinco WHERE status=$status;";
+        $consulta = "SELECT * FROM manuales WHERE status=$status;";
         $hacerconsulta= mysql_query($consulta,$conexion);
         $numeroColumnas = mysql_num_fields($hacerconsulta);
         $numeroDeRegistros= mysql_num_rows($hacerconsulta);        
@@ -36,9 +36,9 @@
             <th colspan=" 9">Lista de Manuales</th> 
         </tr>
            <tr>
-           <th>Id</th>
-           <th>NombreTren</th>
-           <th>Detenido</th>
+           <th>Clave</th>
+           <th>Titulo</th>
+           <th></th>
            <th>Recuperado</th>
            <th>Linea</th>
 
