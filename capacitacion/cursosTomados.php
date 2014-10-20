@@ -51,7 +51,7 @@
                 ?>       
                 <br>
                 <br>
-                <table class="estiloTabla">
+                <table class="estiloTabla" style="width: 100%">
                     <tr class="cabeceraTabla">
                         <th colspan="3"><?php echo $lista; ?></th>
                         <th>TOTAL: <?php echo $numInscritos;?></th>

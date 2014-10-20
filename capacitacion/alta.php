@@ -4,8 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>ALTA</title>
-        <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        
+        <link href="../css/movil.css" rel="stylesheet" type="text/css">        
     </head>
     <body>
         <div id="content">
@@ -19,13 +18,11 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href='.php'><img src="../img/cinstruc.png" class="grande"></a></li>
+                    <li><a href='altaInstructores.php'><img src="../img/cinstruc.png" class="grande"></a></li>
                     <li><a href='altaCursos.php'><img src="../img/ccursos_1.png" class="grande"></a></li>
                     <li><a href='.php'><img src="../img/coficios.png" class="grande"></a></li>
                     <li><a href='.php'><img src="../img/cmanuales_1.png" class="grande"></a></li>
-                    <li><a href='alta1.php'><img src="../img/cpersonal_1.png" class="grande"></a></li>
-
-                   
+                    <li><a href='alta1.php'><img src="../img/cpersonal_1.png" class="grande"></a></li>                  
                 </ul>
             </div>
         </div>

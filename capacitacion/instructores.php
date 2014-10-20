@@ -21,7 +21,7 @@
                 </ul>  
                 <br>
                 <br>
-                <table class="estiloTabla">
+                <table class="estiloTabla" style="width: 100%">
                     <tr class="cabeceraTabla">
                         <th>TALLER</th>
                         <th>INSTRUCTORES</th>

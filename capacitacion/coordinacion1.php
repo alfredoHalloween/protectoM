@@ -5,8 +5,7 @@
         <title>CANTIDAD DE CURSOS IMPARTIDOS POR COORDINACIÓN</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
         <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
-        <?php
-            $total = 0;
+        <?php           
             $totalCapacitados = 0;  
             require 'conexion.php';
             require 'claseEmpleado.php';            
@@ -23,7 +22,7 @@
                 </ul>            
                 <br>
                 <br>
-                <table class="estiloTabla">
+                <table class="estiloTabla" style="width: 100%;">
                     <tr class="cabeceraTabla">
                         <th colspan="3">RESUMEN POR COORDINACIÓN</th>
                     </tr>
@@ -33,6 +32,7 @@
                         <th>CAPACITACIÓN 2014</th>
                     </tr>                        
                     <?php
+                        $total = 0;
                         $consulta = "SELECT * FROM general WHERE coordinacion=\"SUBGERENCIA DE MANTENIMIENTO MAYOR Y REHABILITACIÓN\";";
                         $hacerConsulta = mysql_query($consulta);
                         $numeroDeRegistros = mysql_num_rows($hacerConsulta);

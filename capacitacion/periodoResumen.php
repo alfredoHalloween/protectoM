@@ -24,9 +24,9 @@
                     <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
-                </ul>
-            </div>
-            <div id="menu">                
+                </ul>                                        
+                <br>
+                <br>
                 <form name="annio" id="annio" action="periodoResumen.php" method="post"> ELIJA UN PERIODO
                     <select name="selector" id="selector">
                         <option value=""></option>
@@ -49,8 +49,7 @@
                         $info->imprimir();
                         $info->obtenerDatos($consultaRealizada);
                     } else {
-                        echo "<table cellpadding='2' cellspacing='2' border='2'>
-                            <td>REGISTROS NO DISPONIBLES</td></table>";
+                        echo "<div class='titulo'>REGISTROS NO DISPONIBLES</div>";
                     }
                 ?>
                 

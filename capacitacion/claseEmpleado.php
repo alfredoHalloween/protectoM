@@ -96,9 +96,13 @@
             $cursosConsulta = "SELECT * FROM cursos WHERE expediente=$this->expediente;";
             $hacerCursos = mysql_query($cursosConsulta);
             $this->numCursos = mysql_num_rows($hacerCursos);
-            for($i = 0; $i < $this->numCursos; $i++) {                
-                $this->temp=mysql_result($hacerCursos, $i, "nom_curso");
-                $this->cadena.="*$this->temp<br>";
+            if($this->numCursos != 0) {
+                for($i = 0; $i < $this->numCursos; $i++) {                
+                    $this->temp=mysql_result($hacerCursos, $i, "nom_curso");
+                    $this->cadena.="*$this->temp<br>";
+                }
+            } else {
+                $this->cadena = "NINGUNO";
             }
         }             
         function imprimirEmpleado() {
@@ -154,7 +158,7 @@
                 $this->cadenaCurso.="*$this->temporal<br>";
             }
 
-            echo "<table class='estiloTabla'>
+            echo "<table class='estiloTabla' style='width: 100%;'>
                     <tr class='cabeceraTabla'> 
                         <th colspan=\"2\">DATOS PERSONALES</th>
                     </tr>
@@ -258,7 +262,7 @@
             if($fechaSeleccionada != NULL) {            
                 $this->totalCurso = mysql_num_rows($hacerCursos);
                 if($this->totalCurso != 0) {
-                    echo "<table class='estiloTabla'>
+                    echo "<table class='estiloTabla' style='width: 100%;'>
                         <tr class='cabeceraTabla'>
                             <th>NOMBRE DE LOS CURSOS<br>(AL $fechaSeleccionada)</th>
                             <th>FECHA DE INICIO</th>
@@ -278,13 +282,12 @@
                             echo "<td nowrap>$this->fechaDeTermino</td>";
                             echo "</tr>";                    
                             $this->indice = $this->comprobacion;
-                        }
-                    }                         
+                        }                        
+                    }    
+                    echo "</table>";
                 } else {
-                    echo "<table cellpadding='2' cellspacing='2' border='2'>
-                        <td>NO HAY CURSOS DISPONIBLLES</td>";
-                }
-                echo "</table>";
+                    echo "<div class='titulo'>NO HAY CURSOS DISPONIBLES</div>";
+                }                
             }    
         }
     }
@@ -316,7 +319,7 @@
         public $total;
                 
         function imprimir() {
-            echo "<table class='estiloTabla'> 
+            echo "<table class='estiloTabla' style='width: 100%'> 
                 <tr class='cabeceraTabla'>
                     <th>NOMBRE CURSO</th>
                     <th>INICIO DEL CURSO</th>
