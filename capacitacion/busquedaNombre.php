@@ -6,7 +6,7 @@
         <title>BUSQUEDA POR NOMBRE</title>
         <link rel="stylesheet" type="text/css" href="../css/movil.css">
         <link rel="stylesheet" type="text/css" href="../css/estilos.css">
-        <link rel="stylesheet" type="text/css" href="../css/tabla2_1.css">
+        <link rel="stylesheet" type="text/css" href="../css/tabla2_1.css">        
     </head>
     <body>        
         <div id="content">
@@ -22,7 +22,7 @@
                 <p align="justify">Introduzca el nombre que desea buscar, empezando por apellido. Si no recuerda el nombre completo, el sistema
                 mostrará una lista con posibles coincidencias.</p>
                 Nombre: <input type="text" name="busNombre" id="busNombre" placeholder="Introducir nombre">
-                <button type="submit">Buscar</button>
+                <button type="submit" onClick="resaltarTexto();">Buscar</button>
             </form>            
             <?php
                 if(isset($_GET['busNombre']) and !empty($_GET['busNombre'])) {
@@ -35,7 +35,7 @@
                     if($resultados != 0) {
                         echo "<br>
                               <br>
-                              <table class='estiloTabla'>
+                              <table class='estiloTabla' id='texto'>
                                 <tr class='cabeceraTabla'>
                                     <th colspan='4'>RESULTADOS: $resultados</th>
                                 </tr>

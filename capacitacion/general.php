@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>INFORMACIÓN GENERAL</title>
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2.css" rel="stylesheet" type="text/css">
+        <link href="../css/tablaAdaptable.css" rel="stylesheet" type="text/css">
         
         
         <?php
@@ -28,23 +28,25 @@
                 </ul>
             </div>
            </div>
-        <table border="1" cellpadding="2" cellspacing="1">
-           <tr> 
-               <th colspan=" 9">Datos generales</th> <th colspan=" 2"> Total =  <?php echo $numeroDeRegistros;?></th> </tr>
-           
+        <div class="titulo">TABLA GENERAL<br>TOTAL: <?php echo $numeroDeRegistros; ?></div>
+        <br>
+        <br>
+        <table class="tabla">
+           <thead>                           
            <tr>
            <th>Expediente</th>
            <th>Nombre</th>
            <th>Puesto</th>
            <th>Adscripción</th>
            <th>Ubicación</th>
+           <th>Coordinación</th>
            <th>Plaza</th>
            <th>Plaza SIDEN</th>
            <th>Calidad</th>
            <th>Area</th>
            <th>Horario</th>
            <th>Descanso</th>
-          </tr>   
+          </thead>   
          
         <?php
         for ($contador=0; $contador<$numeroDeRegistros; $contador ++){           
@@ -53,6 +55,7 @@
             $puesto=mysql_result ($hacerconsulta, $contador, "puesto");
             $adscripcion=mysql_result ($hacerconsulta, $contador, "adscripcion");
             $ubicacion=mysql_result ($hacerconsulta, $contador, "ubicacion");
+            $coordinacion=  mysql_result($hacerconsulta, $contador, "coordinacion");
             $plaza=mysql_result ($hacerconsulta, $contador, "plaza");
             $siden=mysql_result ($hacerconsulta, $contador, "siden");
             $calidad=mysql_result ($hacerconsulta, $contador, "calidad");
@@ -66,6 +69,7 @@
           <td><?php echo $puesto; ?></td>
           <td><?php echo $adscripcion; ?></td>
           <td><?php echo $ubicacion; ?></td>
+          <td><?php echo $coordinacion; ?></td>
           <td><?php echo $plaza; ?></td>
           <td><?php echo $siden; ?></td>
           <td><?php echo $calidad; ?></td>

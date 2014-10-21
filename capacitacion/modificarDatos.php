@@ -57,7 +57,7 @@
                                 }
                                 $extension = mysql_result($hacerConsulta, 0, "extension");
                                 $correo = mysql_result($hacerConsulta, 0, "correo");
-                                echo "<table class='estiloTabla'>
+                                echo "<table class='estiloTabla' style='width: 100%;'>
                                         <tr class='cabeceraTabla'>
                                             <th colspan='3'>DATOS PERSONALES</th>
                                         </tr>
