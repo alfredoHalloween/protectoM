@@ -19,7 +19,7 @@
             </div>            
             <div id="menu">
                 <ul>
-                    <li><a href='resumenManual.php'><img src="../img/resumenManual.png" class="grande"></a></li>
+                    <li><a href='resumManual.php'><img src="../img/resumenManual.png" class="grande"></a></li>
                     <li><a href='listaManual.php'><img src="../img/listaManual.png" class="grande"></a></li>
                      
                 </ul>
