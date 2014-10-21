@@ -64,7 +64,7 @@
                             <div class='titulo'>NO SE HAN ENCONTRADO RESULTADOS</div>";
                     }                        
                 }                
-            ?>
+            ?>            
         </div>        
     </body>   
 </html>
