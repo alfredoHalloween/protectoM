@@ -4,7 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>MANUALES</title>
-<<<<<<< HEAD
         <link href="css/movil.css" rel="stylesheet" type="text/css">
         <link href="css/tabla2.css" rel="stylesheet" type="text/css">
         
@@ -13,17 +12,13 @@
         if(isset($_GET['status'])) {
             $status=$_GET['status'];
         }
-        require 'conexion.php';
-        $consulta = "SELECT * FROM manuales WHERE status=$status;";
-        $hacerconsulta= mysql_query($consulta,$conexion);
-        $numeroColumnas = mysql_num_fields($hacerconsulta);
-        $numeroDeRegistros= mysql_num_rows($hacerconsulta);        
+            require 'conexion.php';
+            $consulta = "SELECT * FROM manuales WHERE status=$status;";
+            $hacerconsulta= mysql_query($consulta,$conexion);
+            $numeroColumnas = mysql_num_fields($hacerconsulta);
+            $numeroDeRegistros= mysql_num_rows($hacerconsulta);            
         ?>
-=======
         <link href="../css/movil.css" rel="stylesheet" type="text/css">
-        <link href="../css/tabla2_1.css" rel="stylesheet" type="text/css">
-        <link href="../css/estilos.css" rel="stylesheet" type="text/css">
->>>>>>> branch 'master' of https://github.com/alfredoHalloween/protectoM.git
     </head>
     <body>   
         <?php           
@@ -42,7 +37,6 @@
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>
-<<<<<<< HEAD
             </div> 
            </div>
      <table border="1" cellpadding="2" cellspacing="1">
@@ -118,7 +112,7 @@
           <th colspan=" 8"> Total =  <?php echo $numeroDeRegistros;?></th>
       </table>
    </body>
-=======
+
                 <br>
                 <br>
                 <form id="tipo" name="tipo" method="post" action="listaManual.php">
@@ -183,4 +177,3 @@
         </div>     
     </body>
 </html>
->>>>>>> branch 'master' of https://github.com/alfredoHalloween/protectoM.git
